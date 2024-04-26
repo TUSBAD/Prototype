@@ -1,0 +1,499 @@
+{
+    "//1": "テンプレートは1.20.5未対応。DHPも未対応のため当分は1.20.4での制作になる。",
+    "//2": "また、TSBからほぼ丸ごと持ってきているため、mod併用の関係で一部ルールの変更予定。",
+    "datapack.env.cmdVersion": "1.20.3",
+    "datapack.env.dataVersion": "1.20.4",
+    "datapack.env.defaultVisibility": "public",
+    "datapack.env.dependsOnVanilla": true,
+    "datapack.env.detectionDepth": 1,
+    "datapack.env.exclude": [],
+    "datapack.env.include": [],
+    "datapack.env.permissionLevel": 2,
+    "datapack.features.semanticColoring": false,
+    "datapack.lint.blockStateBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.blockStateCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.blockStateEqualSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.blockStateSortKeys": null,
+    "datapack.lint.blockStateTrailingComma": false,
+    "datapack.lint.eol": "LF",
+    "datapack.lint.idOmitDefaultNamespace": [
+        "warning",
+        false
+    ],
+    "datapack.lint.nameOfObjectives": [
+        "error",
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "allowMoreParts": true,
+            "sep": ".",
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+        }
+    ],
+    "datapack.lint.nameOfTags": [
+        "error",
+        [
+            {
+                "label": "ChainedPascalCase",
+                "allowLessParts": true,
+                "allowMoreParts": true,
+                "sep": ".",
+                "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+            },
+            {
+                "label": "this",
+                "parts": "/this/"
+            }
+        ]
+    ],
+    "datapack.lint.nameOfScoreHolders": [
+        "error",
+        {
+            "label": "DollerPrefix",
+            "prefix": "$"
+        }
+    ],
+    "datapack.lint.nameOfTeams": [
+        "error",
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "allowMoreParts": true,
+            "sep": ".",
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+        }
+    ],
+    "datapack.lint.nbtArrayBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.nbtArrayCommaSpacing": {
+        "before": 0,
+        "after": 1
+    },
+    "datapack.lint.nbtArrayLengthCheck": [
+        "warning",
+        true
+    ],
+    "datapack.lint.nbtArraySemicolonSpacing": {
+        "after": 1
+    },
+    "datapack.lint.nbtArrayTrailingComma": false,
+    "datapack.lint.nbtBoolean": [
+        "warning",
+        true
+    ],
+    "datapack.lint.nbtByteSuffix": "b",
+    "datapack.lint.nbtCompoundBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.nbtCompoundColonSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtCompoundCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtCompoundKeyQuote": [
+        "warning",
+        false
+    ],
+    "datapack.lint.nbtCompoundKeyQuoteType": [
+        "warning",
+        "always double"
+    ],
+    "datapack.lint.nbtCompoundSortKeys": null,
+    "datapack.lint.nbtCompoundTrailingComma": false,
+    "datapack.lint.nbtDoubleOmitSuffix": false,
+    "datapack.lint.nbtDoubleSuffix": "d",
+    "datapack.lint.nbtFloatSuffix": "f",
+    "datapack.lint.nbtListBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.nbtListCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtListLengthCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.nbtListTrailingComma": false,
+    "datapack.lint.nbtLongSuffix": "l",
+    "datapack.lint.nbtPathQuote": [
+        "warning",
+        false
+    ],
+    "datapack.lint.nbtPathQuoteType": [
+        "warning",
+        "always double"
+    ],
+    "datapack.lint.nbtShortSuffix": "s",
+    "datapack.lint.nbtStringQuote": [
+        "warning",
+        true
+    ],
+    "datapack.lint.nbtStringQuoteType": [
+        "warning",
+        "prefer double"
+    ],
+    "datapack.lint.nbtTypeCheck": [
+        "warning",
+        "strictly"
+    ],
+    "datapack.lint.selectorBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.selectorCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.selectorEqualSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.selectorKeyQuote": [
+        "warning",
+        false
+    ],
+    "datapack.lint.selectorKeyQuoteType": null,
+    "//3" : "下記は軽量化を目指すにあたって順序が大事なので厳守すること",
+    "datapack.lint.selectorSortKeys": [
+        "warning",
+        [
+            "type",
+            "gamemode",
+            "gamemodeNeg",
+            "team",
+            "teamNeg",
+            "typeNeg",
+            "tag",
+            "tagNeg",
+            "name",
+            "nameNeg",
+            "scores",
+            "advancements",
+            "nbt",
+            "nbtNeg",
+            "predicate",
+            "predicateNeg",
+            "level",
+            "x_rotation",
+            "y_rotation",
+            "distance",
+            "x",
+            "y",
+            "z",
+            "dx",
+            "dy",
+            "dz",
+            "sort",
+            "limit"
+        ]
+    ],
+    "datapack.lint.selectorTrailingComma": false,
+    "datapack.lint.strictAdvancementCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictAttributeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictBlockCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictBlockTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictBossbarCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictDimensionTypeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictEnchantmentCheck": [
+        "information",
+        "always"
+    ],
+    "datapack.lint.strictEntityTypeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictEntityTypeTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictFluidCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictFluidTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictFunctionCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictFunctionTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictItemCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictItemTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictLootTableCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictMobEffectCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictMotiveCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictObjectiveCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictParticleTypeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictPotionCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictPredicateCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictRecipeCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictScoreHolderCheck": [
+        "information",
+        true
+    ],
+    "datapack.lint.strictSoundEventCheck": [
+        "error",
+        "only-default-namespace"
+    ],
+    "datapack.lint.strictStorageCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictTeamCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.stringQuote": [
+        "warning",
+        true
+    ],
+    "datapack.lint.stringQuoteType": [
+        "warning",
+        "prefer double"
+    ],
+    "datapack.lint.timeOmitTickUnit": false,
+
+    "//4" : "テンプレート部",
+    "mcdutil.createDatapackTemplate.customTemplate": [
+        {
+            "label": "チェストテンプレ/LootTableタイプ",
+            "picked": false,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/tags/functions/chest/loot_type/place.json",
+                    "content": {
+                        "values": [
+                            "tusb_ad:chest/%namespace%/place"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "tusb_ad:chest/%namespace%/place"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/functions/chest/%namespace%/place.mcfunction",
+                    "content": [
+                        "#> tusb_ad:chest/%namespace%/place",
+                        "#",
+                        "# チェスト設置時に呼び出されるfunction(LootTableタイプ)",
+                        "#",
+                        "# @within tag/function tusb_ad:chest/fixed_type/place",
+                        "",
+                        "# 設置する座標を設定",
+                        "# X座標",
+                        "data modify storage tusbad:chest %namespace%.posX set value ",
+                        "# Y座標",
+                        "data modify storage tusbad:chest %namespace%.posY set value ",
+                        "# Z座標",
+                        "data modify storage tusbad:chest %namespace%.posZ set value ",
+                        "",
+                        "# 中身のデータを設定",
+                        "# LootTableのpathを設定してね",
+                        "data modify storage tusbad:chest %namespace%.LootTable set value \"\"",
+                        "",
+                        "# macroでデータを渡して実行",
+                        "function tusb_ad:chest/%namespace%/result with storage tusbad:chest %namespace%",
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/functions/chest/%namespace%/result.mcfunction",
+                    "content": [
+                        "#> tusb_ad:chest/%namespace%/result",
+                        "#",
+                        "# チェストを実際に設置するfunction(LootTableタイプ)",
+                        "#",
+                        "# @within function tusb_ad:chest/%namespace%/place",
+                        "",
+                        "# チャンクレベルを31にさせるためにforceload",
+                        "$forceload add $(posX) $(posZ) $(posX) $(posZ)",
+                        "",
+                        "# チャンクレベルが更新されたのでチェストをplace",
+                        "$setblock $(posX) $(posY) $(posZ) minecraft:chest{LootTable: \"$(LootTable)\"} replace",
+                        "",
+                        "# チャンクレベルを戻す",
+                        "$forceload remove $(posX) $(posZ) $(posX) $(posZ)",
+                        "",
+                        "# storageの中身をリセット",
+                        "data modify storage tusbad:chest %namespace% set value {}",
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "チェストテンプレ/固定チェストタイプ",
+            "picked": false,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/tags/functions/chest/fixed_type/place.json",
+                    "content": {
+                        "values": [
+                            "tusb_ad:chest/%namespace%/place"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "tusb_ad:chest/%namespace%/place"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/functions/chest/%namespace%/place.mcfunction",
+                    "content": [
+                        "#> tusb_ad:chest/%namespace%/place",
+                        "#",
+                        "# チェスト設置時に呼び出されるfunction(固定チェストタイプ)",
+                        "#",
+                        "# @within tag/function tusb_ad:chest/loot_type/place",
+                        "",
+                        "# 設置する座標を設定",
+                        "# X座標",
+                        "data modify storage tusbad:chest %namespace%.posX set value ",
+                        "# Y座標",
+                        "data modify storage tusbad:chest %namespace%.posY set value ",
+                        "# Z座標",
+                        "data modify storage tusbad:chest %namespace%.posZ set value ",
+                        "",
+                        "# 中身のデータを設定",
+                        "# 固定チェストのstructureデータがあるpathを設定してね",
+                        "",
+                        "# 注意! チェストstructureを作るときは向きに気をつけよう!設置されるであろう場所に応じてstructureにおける向きを変えておこう。",
+                        "data modify storage tusbad:chest %namespace%.Structure set value \"\"",
+                        "",
+                        "# 先にforceloadしておく",
+                        "function tusb_ad:chest/%namespace%/forceload with storage tusbad:chest %namespace%",
+                        "",
+                        "# 1tick後に実行",
+                        "schedule function tusb_ad:chest/%namespace%/data_pass 1t",
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/functions/chest/%namespace%/forceload.mcfunction",
+                    "content": [
+                        "#> tusb_ad:chest/%namespace%/forceload",
+                        "#",
+                        "# 該当座標のチャンクのforceloadをする",
+                        "#",
+                        "# @within function tusb_ad:chest/%namespace%/place",
+                        "",
+                        "# チャンクレベルを31にさせるためにforceload",
+                        "$forceload add $(posX) $(posZ) $(posX) $(posZ)",
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/functions/chest/%namespace%/data_pass.mcfunction",
+                    "content": [
+                        "#> tusb_ad:chest/%namespace%/data_pass",
+                        "#",
+                        "# scheduleからmacroを渡す橋渡しfunction",
+                        "#",
+                        "# @within function tusb_ad:chest/%namespace%/place",
+                        "",
+                        "# placeコマンドはforcelaodサブtick実行でできないので1tick遅延して実行する必要がある",
+                        "function tusb_ad:chest/%namespace%/result with storage tusbad:chest %namespace%",
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/tusb_ad/functions/chest/%namespace%/result.mcfunction",
+                    "content": [
+                        "#> tusb_ad:chest/%namespace%/result",
+                        "#",
+                        "# チェストを実際に設置するfunction(固定チェストタイプ)",
+                        "#",
+                        "# @within function tusb_ad:chest/%namespace%/data_pass",
+                        "",
+                        "# チャンクレベルが1tick前に更新されたのでチェストをplace",
+                        "$place template $(Structure) $(posX) $(posY) $(posZ)",
+                        "# チャンクレベルを戻す",
+                        "$forceload remove $(posX) $(posZ) $(posX) $(posZ)",
+                        "",
+                        "# storageの中身のリセット",
+                        "data modify storage tusbad:chest %namespace% set value {}",
+                    ]
+                }
+            ]
+        }
+    ],
+    "mcdutil.createDatapackTemplate.defaultFolder": false,
+    "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
+    "mcdutil.createDatapackTemplate.defaultVanillaData": false,
+    "workbench.iconTheme": "mc-dp-icons"
+}

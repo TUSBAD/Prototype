@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+    // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp→(マーケットの識別子のやつをここに書けば良い)
+
+    // 推奨拡張機能
+    "recommendations": 
+    [
+        "spgoding.datapack-language-server",
+        "chencmd.mc-datapack-utility",
+        "ms-ceintl.vscode-language-pack-ja",
+        "seatonjiang.gitmoji-vscode",
+        "arcensoth.language-mcfunction",
+        "editorconfig.editorconfig",
+        "superant.mc-dp-icons",
+        "misodee.vscode-nbt"
+    ],
+    // 非推奨拡張機能
+    "unwantedRecommendations": 
+    [    
+
+    ]
+}
