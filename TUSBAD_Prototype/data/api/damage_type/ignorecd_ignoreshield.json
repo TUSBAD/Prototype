@@ -1,0 +1,9 @@
+{
+    "//": "msgidは死亡時に表示するやつの紐付け",
+    "message_id": "generic",
+    "exhaustion": 0,
+    "scaling": "never",
+    "effects": "hurt",
+    "death_message_type": "default"
+  }
+  
