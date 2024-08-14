@@ -18,6 +18,9 @@ execute if data storage tusb_ad:api test_op{Operation:"multiply_base"} store res
 execute if data storage tusb_ad:api test_op{Operation:"multiply_base"} run scoreboard players operation $MultiBase temp += $Temp temp
 
 # multiplyの場合(未実装)
+# storageから仮storageにコピーしておいて後ほど計算する
+# appendでデータを追加したら勝手にリスト型になるのでその後は再帰ループで計算でおけ
+execute if data storage tusb_ad:api test_op{Operation:"multiply"} run data modify storage tusb_ad:api multiply append from storage tusb_ad:api test_op.Amount
 
 # 末尾を削除
 data remove storage tusb_ad:api test_temp.[-1]
@@ -25,4 +28,4 @@ data remove storage tusb_ad:api test_temp.[-1]
 data remove storage tusb_ad:api test_op
 
 # もしまだ要素があるなら再起
-execute if data storage tusb_ad:api test_temp.[-1] run function api:stat/test/separate_modifier
+execute if data storage tusb_ad:api test_temp.[0] run function api:stat/test/separate_modifier
