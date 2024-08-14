@@ -36,7 +36,8 @@ scoreboard objectives add backup_max_absorption_amount dummy
 scoreboard objectives add set_health_amount dummy
 scoreboard objectives add set_heal_amount dummy
 
-
+#乱数取得用
+scoreboard objectives add randomNum dummy
 
 # calc計算用スコアボード
 
