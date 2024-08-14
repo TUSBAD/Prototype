@@ -24,7 +24,7 @@ execute as @a run scoreboard players operation _randCalcMan randomNum += _randCa
 execute as @a if score _randCalcMan calc1 <= _randCalcMan calc2 run scoreboard players operation _randCalcMan randomNum = _randCalcMan calc2
 
 #乱数値をストレージに保存
-execute store result storage random_number:randomnum rand int 1 run scoreboard players get _randCalcMan randomNum
+execute store result storage tusb_ad:api rand int 1 run scoreboard players get _randCalcMan randomNum
 
 #乱数用のアマスタを削除
 kill @e[tag=rnd]
