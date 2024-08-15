@@ -23,7 +23,6 @@ scoreboard players set $modifier temp 1000
 scoreboard players operation $modifier temp += $add temp
 
 # multiplybaseの処理
-
 # multiply_baseにデフォルト100を入れる
 scoreboard players set $MultiBase temp 100
 # addとかける
@@ -31,11 +30,9 @@ scoreboard players operation $modifier temp *= $MultiBase temp
 
 # かけたあと無駄な分を割り算する
 
-
 # multiplyの処理
-
-# multiply事に再帰functionで掛け算する
-
+# もしあるなら実行
+execute if data storage tusb_ad:api multiply[0] run function api:stat/calc_multiply
 
 # 値をそれぞれで返却
 execute store result storage tusb_ad:api return.modifier.add float 0.01 run scoreboard players get $add temp

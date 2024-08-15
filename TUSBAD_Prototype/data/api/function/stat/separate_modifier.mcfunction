@@ -15,6 +15,7 @@ execute if data storage tusb_ad:api test_op{Operation:"multiply_base"} store res
 execute if data storage tusb_ad:api test_op{Operation:"multiply_base"} run scoreboard players operation $MultiBase temp += $Temp temp
 
 # multiplyの場合(未実装)
+execute if data storage tusb_ad:api test_op{Operation:"multiply"} run data modify storage tusb_ad:api multiply append from storage tusb_ad:api test_op.Amount
 
 # 末尾を削除
 data remove storage tusb_ad:api test_temp.[-1]

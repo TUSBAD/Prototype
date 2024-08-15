@@ -34,11 +34,11 @@ data modify storage tusb_ad:api temp_modifier set from storage oh_my_dat: _[-4][
 
 function api:stat/add_modifier
 
-# 中身をtemp storageに移したあと、scoreboardで計算
-
+# 値を代入
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].physical_attack_power set from storage tusb_ad:api return.modifier
 
 # 値を確認
-tellraw @a [{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].physical_attack_power", "storage": "oh_my_dat:"}, {"text": "がstorageの値です"}]
+tellraw @a [{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].physical_attack_power.stats", "storage": "oh_my_dat:"}, {"text": "がstorageの値です"}]
 
 
 # ん～ここをmacroで呼び出して、理由に応じて値を足すって感じになるのかね～
