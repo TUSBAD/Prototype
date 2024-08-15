@@ -1,5 +1,16 @@
 #> api:load
 
+
+
+# 定数
+scoreboard objectives add const dummy
+
+scoreboard players set $int_max const 2147483647
+scoreboard players set $int_min const -2147483648
+scoreboard players set $system_max const 999999999
+scoreboard players set $system_min const -999999999
+scoreboard players set $minus const -1
+
 # 取得用
 
 scoreboard objectives add max_health dummy {"text":"エンティティの最大体力(0.01HP)"}
@@ -25,7 +36,8 @@ scoreboard objectives add backup_max_absorption_amount dummy
 scoreboard objectives add set_health_amount dummy
 scoreboard objectives add set_heal_amount dummy
 
-
+# 乱数取得用
+scoreboard objectives add randomNum dummy
 
 # calc計算用スコアボード
 
