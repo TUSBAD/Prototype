@@ -8,7 +8,7 @@ function player_manager:update/player_dat/player_common/inventory/
 function #oh_my_dat:please
 
 #インベントリが空でない状態で保存処理が行われたら墓の数を一つ増やす
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory[-1] run scoreboard players add $TombCounter TombCount 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory[-1] run scoreboard players add $TombCounter tomb_count 1
 
 #保存したストレージを死亡ストレージの末尾に追加（インベントリが空であれば弾く）
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory[-1] run data modify storage tusb_ad:player_manager tomb append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory
