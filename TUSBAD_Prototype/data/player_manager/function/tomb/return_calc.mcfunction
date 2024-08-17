@@ -4,13 +4,13 @@
 #取り返す数を算出
 #半数を求める
 scoreboard players operation $TombCounter TombCalc = $TombCounter TombCount
-scoreboard players set $TombCounter_calc TombCalc 2
-scoreboard players operation $TombCounter TombCalc /= $TombCounter_calc TombCalc
+scoreboard players set $TombCounterCalc TombCalc 2
+scoreboard players operation $TombCounter TombCalc /= $TombCounterCalc TombCalc
 
 #余りを求める
-scoreboard players operation $TombCounter_calc TombCount = $TombCounter TombCount
-scoreboard players operation $TombCounter_calc TombCount %= $TombCounter_calc TombCalc
-scoreboard players operation $TombCounter TombCalc += $TombCounter_calc TombCount
+scoreboard players operation $TombCounterCalc TombCount = $TombCounter TombCount
+scoreboard players operation $TombCounterCalc TombCount %= $TombCounterCalc TombCalc
+scoreboard players operation $TombCounter TombCalc += $TombCounterCalc TombCount
 
 #墓の総数を減算
 scoreboard players operation $TombCounter TombCount -= $TombCounter TombCalc
