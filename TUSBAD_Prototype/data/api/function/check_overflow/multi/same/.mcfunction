@@ -13,12 +13,13 @@ execute store result score $maxtemp temp run scoreboard players get $system_max 
 # 計算
 scoreboard players operation $maxtemp temp /= $multi2 temp
 
-# a >= maxtempを比較
-execute if score $multi1 temp >= $maxtemp temp run say overflow
+# a >= maxtempを比較し、オーバーフローならtrueを返す
+execute if score $multi1 temp >= $maxtemp temp run scoreboard players set $return temp 1
+execute if score $multi1 temp <= $maxtemp temp run scoreboard players set $return temp 0
 
 # 一応tellrawして中身を見る
-tellraw @a [{"text": "aの中身: "},{"score":{"name": "$multi1", "objective": "temp"}}]
-tellraw @a [{"text": "bの中身: "},{"score":{"name": "$maxtemp", "objective": "temp"}}]
+#tellraw @a [{"text": "aの中身: "},{"score":{"name": "$multi1", "objective": "temp"}}]
+#tellraw @a [{"text": "bの中身: "},{"score":{"name": "$maxtemp", "objective": "temp"}}]
 
 # いらないのリセット
 scoreboard players reset $maxtemp temp

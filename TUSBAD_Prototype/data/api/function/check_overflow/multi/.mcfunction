@@ -1,13 +1,13 @@
-#> api:check_overflow/
+#> api:check_overflow/multi/
 #
 # inputされた2つの値をかけた際にオーバーフローするかどうかを判定します。
-# returnは今のところ作ってないです、今後作ります。
+# 判定結果はスコアボード$return tempに代入されます。参照後、呼び出し元でリセットしてください。
 #
 # @input
 #   storage tusb_ad:api argument.multi1
 #   storage tusb_ad:api argument.multi2
 # @output
-#   nothing now
+#   score $return temp
 
 # inputされた値を比較します
 
@@ -15,8 +15,16 @@
 # +-検知用スコアボード
 
 # storageからscoreboardに代入
-execute store result score $multi1 temp run data get storage tusb_ad:api argument.multi1 100
-execute store result score $multi2 temp run data get storage tusb_ad:api argument.multi2 100
+
+# argument.scale=1
+execute if data storage tusb_ad:api {argument:{scale:1}} store result score $multi1 temp run data get storage tusb_ad:api argument.multi1 1
+execute if data storage tusb_ad:api {argument:{scale:1}} store result score $multi2 temp run data get storage tusb_ad:api argument.multi2 1
+# argument.scale=10
+execute if data storage tusb_ad:api {argument:{scale:10}} store result score $multi1 temp run data get storage tusb_ad:api argument.multi1 10
+execute if data storage tusb_ad:api {argument:{scale:10}} store result score $multi2 temp run data get storage tusb_ad:api argument.multi2 10
+# argument.scale=100
+execute if data storage tusb_ad:api {argument:{scale:100}} store result score $multi1 temp run data get storage tusb_ad:api argument.multi1 100
+execute if data storage tusb_ad:api {argument:{scale:100}} store result score $multi2 temp run data get storage tusb_ad:api argument.multi2 100
 
 # 最初の判定は1、次は10を足すようにする
 
@@ -40,6 +48,7 @@ execute if score $multicheck temp matches 10 run function api:check_overflow/mul
 execute if score $multicheck temp matches 11 run function api:check_overflow/multi/same/
 
 # リセット
+data remove storage tusb_ad:api argument.scale
 scoreboard players reset $multicheck temp
 scoreboard players reset $multi1 temp
 scoreboard players reset $multi2 temp
