@@ -17,26 +17,30 @@
 function api:stat/separate_modifier
 
 # デフォルト値の設定(1000)
-scoreboard players set $modifier temp 1000
+scoreboard players set $modifier temp 100
 
 # addの処理
 scoreboard players operation $modifier temp += $add temp
 
 # multiplybaseの処理
 # multiply_baseにデフォルト100を入れる
-scoreboard players set $MultiBase temp 100
+scoreboard players set $multi_base temp 100
 # addとかける
-scoreboard players operation $modifier temp *= $MultiBase temp
+scoreboard players operation $modifier temp *= $multi_base temp
+
 
 # かけたあと無駄な分を割り算する
 
 # multiplyの処理
+
+# デフォルト値を設定
+scoreboard players set $multi temp 100
 # もしあるなら実行
 execute if data storage tusb_ad:api multiply[0] run function api:stat/calc_multiply
 
 # 値をそれぞれで返却
 execute store result storage tusb_ad:api return.modifier.add float 0.01 run scoreboard players get $add temp
-execute store result storage tusb_ad:api return.modifier.multiply_base float 0.01 run scoreboard players get $MultiBase temp
+execute store result storage tusb_ad:api return.modifier.multiply_base float 0.01 run scoreboard players get $multi_base temp
 execute store result storage tusb_ad:api return.modifier.multiply float 0.01 run say hi
 execute store result storage tusb_ad:api return.modifier.total float 0.01 run scoreboard players get $modifier temp
 
@@ -50,5 +54,5 @@ execute store result storage tusb_ad:api return.modifier.total float 0.01 run sc
 
 scoreboard players reset $modifier temp
 scoreboard players reset $add temp
-
-scoreboard players reset $MultiBase temp
+scoreboard players reset $multi_base temp
+scoreboard players reset $multi temp
