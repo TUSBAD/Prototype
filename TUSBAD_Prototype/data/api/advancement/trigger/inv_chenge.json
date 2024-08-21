@@ -1,0 +1,20 @@
+{
+    "criteria": {
+      "requirement":
+       {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+            "items": [
+                {
+                    "components": {
+                        "custom_data": {"passive_item":true}
+                    }
+                }
+            ]
+        } 
+       }
+    },
+    "rewards": {
+      "function": "api:trigger/passive_item"
+    }
+}
