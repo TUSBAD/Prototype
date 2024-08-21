@@ -37,7 +37,7 @@ scoreboard objectives add set_health_amount dummy
 scoreboard objectives add set_heal_amount dummy
 
 # 乱数取得用
-scoreboard objectives add randomNum dummy
+scoreboard objectives add random_num dummy
 
 # calc計算用スコアボード
 
