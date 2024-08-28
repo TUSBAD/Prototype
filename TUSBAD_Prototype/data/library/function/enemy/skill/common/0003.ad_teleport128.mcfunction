@@ -17,7 +17,6 @@
 #me は§5§l§n異空間転送§rを発動した！
 tp @a[distance=..128] @s
 effect give @p resistance 1 4 true
-effect give @p blindness 3 100 false
-#ここの盲目は暗闇に変える？
+effect give @p darkness 3 100 false
 playsound minecraft:block.portal.trigger hostile @a[distance=..128] ~ ~ ~ 0.75 2 1
 particle witch ~ ~ ~ ~ ~ ~ 0 50 force @s
