@@ -4,6 +4,7 @@
 # 32ブロック以内のランダムなプレイヤーと位置を入れ替える
 # カツ丼の思い付きで作成
 
+#ログの部分（発動時メッセージ）は各自で雰囲気を出してください。
 summon marker ~ ~ ~ {Silent:true,NoGravity:true,Tags:["swap_marker"]}
 tag @r[distance=..32] add swap_player
 tp @s @a[distance=..32,limit=1,tag=swap_player]

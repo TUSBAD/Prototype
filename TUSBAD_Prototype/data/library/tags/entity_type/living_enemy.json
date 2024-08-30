@@ -1,0 +1,31 @@
+{
+    "values": [
+      "minecraft:spider",
+      "minecraft:cave_spider",
+      "minecraft:creeper",
+      "minecraft:enderman",
+      "minecraft:silverfish",
+      "minecraft:endermite",
+      "minecraft:witch",
+      "minecraft:vindicator",
+      "minecraft:evoker",
+      "minecraft:illusioner",
+      "minecraft:vex",
+      "minecraft:rabbit",
+      "minecraft:guardian",
+      "minecraft:elder_guardian",
+      "minecraft:ender_dragon",
+      "minecraft:slime",
+      "minecraft:magma_cube",
+      "minecraft:shulker",
+      "minecraft:piglin",
+      "minecraft:piglin_brute",
+      "minecraft:chicken",
+      "minecraft:horse",
+      "minecraft:ghast",
+      "minecraft:pufferfish",
+      "minecraft:pillager",
+      "minecraft:warden"
+    ]
+  }
+  
