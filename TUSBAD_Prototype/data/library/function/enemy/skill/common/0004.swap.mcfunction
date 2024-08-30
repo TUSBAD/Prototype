@@ -13,3 +13,4 @@ effect give @a[distance=..32,limit=1,tag=swap_player] resistance 1 4 true
 playsound minecraft:block.portal.trigger hostile @a[distance=..32,limit=1,tag=swap_player] ~ ~ ~ 0.75 2 1
 playsound minecraft:block.portal.trigger hostile @s ~ ~ ~ 0.75 2 1
 particle witch ~ ~ ~ ~ ~ ~ 0 50 force @s
+tag @a[tag=swap_player] remove swap_player
