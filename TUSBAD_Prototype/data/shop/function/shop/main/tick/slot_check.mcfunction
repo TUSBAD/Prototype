@@ -1,4 +1,4 @@
-#> shop:shop/main/open/slot_cheak
+#> shop:shop/main/tick/slot_check
 
 function #oh_my_dat:please
 data modify storage shop: shop_name set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].shop_name
@@ -53,6 +53,9 @@ execute unless data storage shop: Items[{Slot:12b,components:{"minecraft:custom_
 
 #13
 execute unless data storage shop: Items[{Slot:13b,components:{"minecraft:custom_data":{none:0}}}] run data modify storage shop: slot set value 13b
+
+#14
+execute unless data storage shop: Items[{Slot:14b,components:{"minecraft:custom_data":{none:0}}}] run data modify storage shop: slot set value 14b
 
 #15
 execute unless data storage shop: Items[{Slot:15b,components:{"minecraft:custom_data":{none:0}}}] run data modify storage shop: slot set value 15b

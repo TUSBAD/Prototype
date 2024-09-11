@@ -1,4 +1,4 @@
-#> core:tick
+#> shop:shop/tick
 #毎ティック処理
 
 
