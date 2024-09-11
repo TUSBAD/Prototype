@@ -5,7 +5,6 @@ data remove storage shop:page Items
 function shop:shop/aseet/init
 
 data modify storage shop:page Items[4] set value {id:"minecraft:emerald",count:1,components:{"minecraft:custom_name":'{"bold":true,"color":"green","italic":false,"text":"←売るもの・買うもの→"}',"minecraft:custom_model_data":1}}
-data modify storage shop:page Items[22] set value {id:"minecraft:emerald",count:1,components:{"minecraft:custom_name":'{"bold":true,"color":"green","italic":false,"text":"交易する"}',"minecraft:custom_model_data":2}}
 data modify storage shop:page Items[18] set value {id:"minecraft:orange_wool",count:1,components:{"minecraft:custom_name":'{"bold":true,"italic":false,"text":"前のページ"}'}}
 
 #bay1

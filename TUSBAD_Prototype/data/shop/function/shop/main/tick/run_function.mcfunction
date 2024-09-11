@@ -8,7 +8,6 @@ $data modify entity @s Items[$(slot)] set from storage shop:page Items[$(slot)]
 
 $function shop:shop/aseet/$(shop_name)/page/$(page)/slot/$(slot)
 
-clear @p[tag=Opener] *[custom_data={none:0}]
-
+clear @a *[custom_data={none:0}]
 
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{none:0}}}}]
