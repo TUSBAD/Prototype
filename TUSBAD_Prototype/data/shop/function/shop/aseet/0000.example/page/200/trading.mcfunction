@@ -3,3 +3,4 @@
 clear @p[tag=Opener] emerald 5
 clear @p[tag=Opener] iron_block 1
 give @p[tag=Opener] emerald[custom_name='"paaaaaa"',lore=['{"color":"dark_red","text":"お前は涅槃に行け"}']] 5
+playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1.0 2 0.0
