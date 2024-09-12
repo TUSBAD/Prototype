@@ -1,8 +1,8 @@
-#> shop:shop/aseet/0000.example/page/200/get_items
+#> shop:shop/asset/0000.example/page/200/get_items
 
 data remove storage shop:page Items
 
-function shop:shop/aseet/init
+function shop:shop/main/manager/init
 
 data modify storage shop:page Items[4] set value {id:"minecraft:emerald",count:1,components:{"minecraft:custom_name":'{"bold":true,"color":"green","italic":false,"text":"←売るもの・買うもの→"}',"minecraft:custom_model_data":1}}
 data modify storage shop:page Items[18] set value {id:"minecraft:orange_wool",count:1,components:{"minecraft:custom_name":'{"bold":true,"italic":false,"text":"前のページ"}'}}
@@ -63,5 +63,5 @@ data modify storage shop:page Items[24] set value {id:"yellow_stained_glass_pane
 data modify storage shop:page Items[25] set value {id:"yellow_stained_glass_pane",count:1,components:{"minecraft:custom_name":'" "'}}
 
 
-function shop:shop/aseet/none_set
+function shop:shop/asset/none_set
 data modify entity @s Items set from storage shop:page Items

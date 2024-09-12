@@ -1,4 +1,4 @@
-#> shop:shop/aseet/0000.example/page/0/none_set
+#> shop:shop/asset/0000.example/page/0/none_set
 
 data modify storage shop:page Items[0] merge value {Slot:0b,components:{"minecraft:custom_data":{none:0}}}
 data modify storage shop:page Items[1] merge value {Slot:1b,components:{"minecraft:custom_data":{none:0}}}

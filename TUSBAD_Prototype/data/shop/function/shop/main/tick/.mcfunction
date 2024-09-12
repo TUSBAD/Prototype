@@ -2,15 +2,22 @@
 
 function #oh_my_dat:please
 
-function shop:shop/main/tick/get_opener with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4]
+data modify storage shop: shop_name set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].shop_name
 
-execute unless entity @e[tag=shopkeep,type=interaction,distance=..0.3] run summon interaction ~ ~ ~ {Tags:["shopkeep"]}
+data remove storage shop: Items
+data modify storage shop: Items set from entity @s Items
+
+data modify storage shop: opener set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].opener
+
+function shop:shop/main/tick/macro with storage shop:
+
+execute unless entity @e[tag=ShopKeep,type=interaction,distance=..0.3] run summon interaction ~ ~ ~ {Tags:["ShopKeep"]}
 
 execute unless entity @a[tag=Opener,distance=..7] run kill @s
-execute unless entity @a[tag=Opener,distance=..7] run kill @e[type=interaction,tag=shopkeep]
+execute unless entity @s run kill @e[type=interaction,tag=ShopKeep,limit=1,sort=nearest]
 
 function shop:shop/main/tick/slot_check
 
-function shop:shop/main/tick/check with storage shop:
+# function shop:shop/main/tick/check with storage shop:
 
 tag @a[tag=Opener] remove Opener

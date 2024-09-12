@@ -1,12 +1,10 @@
 #> shop:shop/main/tick/run_function
 
-$execute if entity @p[predicate=shop:cheak_cursor,tag=Opener] run item replace entity @p[tag=Opener] player.cursor from entity @s container.$(slot)
+$execute if entity @p[predicate=shop:cheak_cursor,tag=Opener] unless data entity @s Items[$(slot)].components."minecraft:custom_data"{none:0} run item replace entity @p[tag=Opener] player.cursor from entity @s container.$(slot)
 
-$function shop:shop/aseet/$(shop_name)/page/$(page)/get_items
+data modify entity @s Items set from storage shop:page Items
 
-$data modify entity @s Items[$(slot)] set from storage shop:page Items[$(slot)]
-
-$function shop:shop/aseet/$(shop_name)/page/$(page)/slot/$(slot)
+$function shop:shop/asset/$(shop_name)/page/$(page)/slot/$(slot)
 
 clear @a *[custom_data={none:0}]
 
