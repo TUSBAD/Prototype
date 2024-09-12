@@ -11,10 +11,9 @@ data modify storage shop: opener set from storage oh_my_dat: _[-4][-4][-4][-4][-
 
 function shop:shop/main/tick/macro with storage shop:
 
-execute unless entity @e[tag=ShopKeep,type=interaction,distance=..0.3] run summon interaction ~ ~ ~ {Tags:["ShopKeep"]}
+execute unless entity @e[tag=ShopKeep,type=interaction,distance=..0.3] run summon interaction ~ ~ ~ {Tags:[ShopKeep]}
 
-execute unless entity @a[tag=Opener,distance=..7] run kill @s
-execute unless entity @s run kill @e[type=interaction,tag=ShopKeep,limit=1,sort=nearest]
+execute unless entity @a[tag=Opener,distance=..7] run function shop:shop/main/tick/kill
 
 function shop:shop/main/tick/slot_check
 
