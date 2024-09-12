@@ -63,5 +63,5 @@ data modify storage shop:page Items[24] set value {id:"yellow_stained_glass_pane
 data modify storage shop:page Items[25] set value {id:"yellow_stained_glass_pane",count:1,components:{"minecraft:custom_name":'" "'}}
 
 
-function shop:shop/asset/none_set
+function shop:shop/main/manager/none_set
 data modify entity @s Items set from storage shop:page Items
