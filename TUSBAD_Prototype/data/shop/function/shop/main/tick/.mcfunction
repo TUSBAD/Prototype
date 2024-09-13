@@ -15,6 +15,8 @@ execute unless entity @e[tag=ShopKeep,type=interaction,distance=..0.3] run summo
 
 execute unless entity @a[tag=Opener,distance=..7] run function shop:shop/main/tick/kill
 
+function shop:shop/main/tick/compare_update
+
 function shop:shop/main/tick/slot_check
 
 # function shop:shop/main/tick/check with storage shop:
