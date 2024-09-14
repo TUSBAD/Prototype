@@ -10,5 +10,7 @@ execute if data storage shop: wrong_item run loot give @p[tag=Opener] mine 10000
 
 data remove storage shop: wrong_item
 
-#開いていたページの内容をリセット
+data modify storage shop: slot set value -1b
+
+#開いていたページの内容を読み込んでリセット
 $function shop:shop/asset/$(shop_name)/page/$(page)/get_items

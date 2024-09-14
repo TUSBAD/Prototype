@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:dynamic",
+            "name": "minecraft:contents"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:lime_shulker_box"
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:debug_stick"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
