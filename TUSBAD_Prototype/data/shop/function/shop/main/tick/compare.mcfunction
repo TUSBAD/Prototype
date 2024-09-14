@@ -2,6 +2,10 @@
 # チェストロッコの中身をスロットごとに個別で比較し、変更があればスロット数を返す
 # なければ-1を返す
 
+#元となる比較データをoh_my_datから代入
+function #oh_my_dat:please
+data modify storage shop:temp Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop
+
 ### 各数字に対応したスロットを比較しています
 data modify storage shop: test set value true 
 execute if data storage shop: Items[{Slot:0b}] store success storage shop: test byte 1 run data modify storage shop:temp Items[0] set from storage shop: Items[{Slot:0b}]
@@ -112,4 +116,4 @@ execute if data storage shop: Items[{Slot:26b}] store success storage shop: test
 execute if data storage shop: {test:true} run return 26
 
 #どこも変更されていないときは-1を返す
-return -1
+execute if data storage shop: {test:false} run return -1
