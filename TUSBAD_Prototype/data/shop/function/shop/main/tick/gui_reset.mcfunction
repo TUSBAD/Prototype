@@ -5,9 +5,9 @@
 $execute unless data storage shop:temp Items[$(slot)].components."custom_data"{none:0} run data modify storage shop: wrong_item set from storage shop:temp Items[$(slot)] 
 
 #確認されている不具合
-#シュルカーボックスの中が空の場合、どんなアイテムでも格納できない
-#シュルカーボックスの中に格納するタイミングが誤っているせいか黒の板ガラスが格納されている
-#ルートテーブルの書き方が悪く、ただしく中のアイテムが出てこない
+#シュルカーボックスの中が空の場合、どんなアイテムでも格納できない（空の場合格納する配列が存在しないためと推測）
+#シュルカーボックスの中にGUI用アイテムである黒の板ガラスが格納されている（格納タイミングが悪いと推測）
+#シュルカーボックスが直で排出され、中のアイテムが出てこない（ルートテーブルの書き方が悪いと推測）
 
 execute if data storage shop: wrong_item run data modify block 10000 0 10000 Items[0] merge from storage shop: wrong_item
 
