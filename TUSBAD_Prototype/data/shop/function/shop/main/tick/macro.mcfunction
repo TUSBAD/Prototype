@@ -5,4 +5,4 @@ $tag @p[nbt={UUID:$(opener)}] add Opener
 
 $function shop:shop/asset/$(shop_name)/tick
 
-$function shop:shop/asset/$(shop_name)/page/$(page)/get_items
+#$function shop:shop/asset/$(shop_name)/page/$(page)/get_items
