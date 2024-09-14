@@ -6,6 +6,11 @@
 function #oh_my_dat:please
 data modify storage shop:temp Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop
 
+### アイテム全てに変更がなければその時点で中止
+data modify storage shop: test set value true 
+execute if data storage shop: Items store success storage shop: test byte 1 run data modify storage shop:temp Items set from storage shop: Items
+execute if data storage shop: {test:false} run return -1
+
 ### 各数字に対応したスロットを比較しています
 data modify storage shop: test set value true 
 execute if data storage shop: Items[{Slot:0b}] store success storage shop: test byte 1 run data modify storage shop:temp Items[0] set from storage shop: Items[{Slot:0b}]
@@ -114,6 +119,3 @@ execute if data storage shop: {test:true} run return 25
 data modify storage shop: test set value true 
 execute if data storage shop: Items[{Slot:26b}] store success storage shop: test byte 1 run data modify storage shop:temp Items[26] set from storage shop: Items[{Slot:26b}]
 execute if data storage shop: {test:true} run return 26
-
-#どこも変更されていないときは-1を返す
-execute if data storage shop: {test:false} run return -1
