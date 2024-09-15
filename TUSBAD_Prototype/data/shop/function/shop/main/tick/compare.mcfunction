@@ -1,10 +1,13 @@
 #> shop:shop/main/tick/compare
-# チェストロッコの中身をスロットごとに個別で比較し、変更があればスロット数を返す
+# チェストロッコの中身をスロットごとに個別で比較し、変更があればスロット番号を返す
 # なければ-1を返す
 
 #元となる比較データをoh_my_datから代入
 function #oh_my_dat:please
 data modify storage shop:temp Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop
+
+#間違っているアイテム取得用のストレージ
+data modify storage shop:temp Items2 merge from storage shop:temp Items
 
 ### アイテム全てに変更がなければその時点で中止
 data modify storage shop: test set value true 
