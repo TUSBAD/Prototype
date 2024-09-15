@@ -14,8 +14,6 @@ $execute unless data storage shop:temp Items[$(slot)].components."minecraft:cust
 #開いていたページの内容を読み込んでリセット
 $function shop:shop/asset/$(shop_name)/page/$(page)/get_items
 
-data modify entity @s Items set from storage shop:page Items
-
 $function shop:shop/asset/$(shop_name)/page/$(page)/slot/$(slot)
 
 function #oh_my_dat:please
