@@ -6,9 +6,6 @@
 function #oh_my_dat:please
 data modify storage shop:temp Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop
 
-#間違っているアイテム取得用のストレージ
-data modify storage shop:temp Items2 merge from storage shop:temp Items
-
 ### アイテム全てに変更がなければその時点で中止
 data modify storage shop: test set value true 
 execute if data storage shop: Items store success storage shop: test byte 1 run data modify storage shop:temp Items set from storage shop: Items
