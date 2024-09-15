@@ -2,7 +2,7 @@
 # チェストロッコの中身をページに応じてリセットする
 
 #混入したアイテムを取得し、GUI用アイテムではないことを確認して保存
-$execute unless data storage shop:temp Items[$(wrong_slot)].components."minecraft:custom_data".none run function shop:shop/main/tick/return_item with storage shop:
+$execute unless data storage shop:temp Items[$(slot)].components."minecraft:custom_data".none run function shop:shop/main/tick/return_item with storage shop:
 
 #確認されている不具合
 #シュルカーボックスの中が空の場合、どんなアイテムでも格納できない（空の場合格納する配列が存在しないためと推測）
@@ -13,4 +13,15 @@ $execute unless data storage shop:temp Items[$(wrong_slot)].components."minecraf
 
 #開いていたページの内容を読み込んでリセット
 $function shop:shop/asset/$(shop_name)/page/$(page)/get_items
+
 data modify entity @s Items set from storage shop:page Items
+
+$function shop:shop/asset/$(shop_name)/page/$(page)/slot/$(slot)
+
+function #oh_my_dat:please
+
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop set from entity @s Items
+
+clear @a *[custom_data={none:0}]
+
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{none:0}}}}]
