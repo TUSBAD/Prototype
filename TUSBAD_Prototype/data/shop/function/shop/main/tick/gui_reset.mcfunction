@@ -2,7 +2,7 @@
 # チェストロッコの中身をページに応じてリセットする
 
 #混入したアイテムを取得し、GUI用アイテムではないことを確認して保存
-$execute unless data storage shop: wrong_item unless data storage shop:temp Items[$(wrong_slot)].components."minecraft:custom_data".none run data modify storage shop: wrong_item set from storage shop:temp Items[$(wrong_slot)] 
+$execute unless data storage shop:temp Items[$(wrong_slot)].components."minecraft:custom_data".none run function shop:shop/main/tick/return_item with storage shop:
 
 #確認されている不具合
 #シュルカーボックスの中が空の場合、どんなアイテムでも格納できない（空の場合格納する配列が存在しないためと推測）
@@ -11,15 +11,6 @@ $execute unless data storage shop: wrong_item unless data storage shop:temp Item
 #シュルカーボックスが直で排出され、中のアイテムが出てこない（ルートテーブルの書き方が悪いと推測）
 #→急に正常に動き出したので様子見中
 
-execute if data storage shop: wrong_item run data modify block 10000 0 10000 Items[0] merge from storage shop: wrong_item
-
-execute if data storage shop: wrong_item run loot give @p[tag=Opener] mine 10000 0 10000 debug_stick
-
-#data remove storage shop: wrong_item
-
-#data modify storage shop: wrong_slot set value -1b
-
-say 異物混入
-
 #開いていたページの内容を読み込んでリセット
 $function shop:shop/asset/$(shop_name)/page/$(page)/get_items
+data modify entity @s Items set from storage shop:page Items
