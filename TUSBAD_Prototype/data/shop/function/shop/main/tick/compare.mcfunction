@@ -11,6 +11,8 @@ data modify storage shop: test set value true
 execute if data storage shop: Items store success storage shop: test byte 1 run data modify storage shop:temp Items set from storage shop: Items
 execute if data storage shop: {test:false} run return -1
 
+data modify storage shop:temp Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop
+
 ### 各数字に対応したスロットを比較しています
 data modify storage shop: test set value true 
 execute if data storage shop: Items[{Slot:0b}] store success storage shop: test byte 1 run data modify storage shop:temp Items[0] set from storage shop: Items[{Slot:0b}]

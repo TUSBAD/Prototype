@@ -12,6 +12,8 @@ $function shop:shop/asset/$(shop_name)/page/0/get_items
 
 $function shop:shop/asset/$(shop_name)/open
 
-data modify entity @s Items set from storage shop:page Items
+#data modify entity @s Items set from storage shop:page Items
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop set from entity @s Items
+
 
 execute at @p[tag=This] run tp @s ~ ~-2 ~
