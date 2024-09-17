@@ -3,6 +3,7 @@
 
 #混入したアイテムを取得し、GUI用アイテムではないことを確認して保存
 $execute unless data storage shop: Items[$(slot)].components."minecraft:custom_data".none run function shop:shop/main/tick/return_item with storage shop:
+#$tellraw @p {"translate":"%1$s\n%2$s","with":[{"entity":"@s","nbt":"Items[$(slot)]"},{"storage":"shop:","nbt":"Items[$(slot)]"}]}
 
 #確認されている不具合
 #シュルカーボックスの中が空の場合、どんなアイテムでも格納できない（空の場合格納する配列が存在しないためと推測）
