@@ -17,6 +17,8 @@ $function shop:shop/asset/$(shop_name)/page/$(page)/get_items
 
 $function shop:shop/asset/$(shop_name)/page/$(page)/slot/$(slot)
 
+execute store result storage shop: page int 1 run scoreboard players get @s page
+
 function #oh_my_dat:please
 
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].temp_shop set from entity @s Items

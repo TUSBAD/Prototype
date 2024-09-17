@@ -7,6 +7,11 @@ function shop:shop/main/manager/init
 data modify storage shop:page Items[4] set value {id:"minecraft:emerald",count:1,components:{"minecraft:custom_name":'{"bold":true,"color":"green","italic":false,"text":"←売るもの・買うもの→"}',"minecraft:custom_model_data":1}}
 data modify storage shop:page Items[18] set value {id:"minecraft:orange_wool",count:1,components:{"minecraft:custom_name":'{"bold":true,"italic":false,"text":"前のページ"}'}}
 
+#交易可能か不可か(ここを変える)
+data modify storage shop:page Items[22] set value {id:"minecraft:red_stained_glass_pane",count:1,components:{"minecraft:custom_name":'{"bold":true,"color":"dark_red","italic":false,"text":"交易不可"}'}}
+execute if score 4 request matches 5.. if score 5 request matches 1.. run data modify storage shop:page Items[22] set value {id:"minecraft:lime_stained_glass_pane",count:1,components:{"minecraft:custom_name":'{"bold":true,"color":"dark_green","italic":false,"text":"交易する"}'}}
+
+#売るもの買うもの(ここを変える)
 #bay1
 data modify storage shop:page Items[1] set value {id:"light_blue_stained_glass_pane",count:1,components:{"minecraft:custom_name":'" "'}}
 
