@@ -1,7 +1,7 @@
 #> shop:shop/main/tick/return_item
 
 # カーソルにあったらそこに戻して終了
-data remove storage shop: test
+#data remove storage shop: test
 $execute store success storage shop: test byte 1 if items entity @p[tag=Opener] player.cursor *[custom_data={none:0}] run item replace entity @p[tag=Opener] player.cursor from entity @s container.$(slot)
 #execute if data storage shop: {test:false} run say たたり
 #execute if data storage shop: {test:true} run say あさり
