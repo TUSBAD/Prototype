@@ -1,0 +1,56 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:observer"
+      },
+      "title": [
+        {
+          "text": ""
+        },
+        {
+          "translate": "ギミック               ",
+          "color": "gold",
+          "bold": true
+        }
+      ],
+      "description": {
+        "translate": "%1$sに存在する%2$s。",
+        "with": [
+          {
+            "translate": "通常世界",
+            "color": "white",
+            "bold": true
+          },
+          {
+            "translate": "ギミック",
+            "color": "gold",
+            "bold": true
+          }
+        ],
+        "color": "white"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "parent": "player_manager:info/newskyland/root",
+    "criteria": {
+      "enter": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "location": {
+                  "dimension": "world_manager:newskyland"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }

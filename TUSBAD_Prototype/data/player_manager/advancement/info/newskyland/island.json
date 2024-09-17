@@ -1,0 +1,56 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:totem_of_undying"
+      },
+      "title": [
+        {
+          "text": ""
+        },
+        {
+          "translate": "様々な島                 ",
+          "color": "light_purple",
+          "bold": true
+        }
+      ],
+      "description": {
+        "translate": "%1$sに存在する様々な%2$s。",
+        "with": [
+          {
+            "translate": "通常世界",
+            "color": "white",
+            "bold": true
+          },
+          {
+            "translate": "島",
+            "color": "red",
+            "bold": true
+          }
+        ],
+        "color": "white"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "parent": "player_manager:info/newskyland/root",
+    "criteria": {
+      "enter": {
+        "trigger": "minecraft:location",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "location": {
+                  "dimension": "world_manager:newskyland"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
