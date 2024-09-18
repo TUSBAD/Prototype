@@ -33,21 +33,8 @@ data remove storage tusb_ad:api calc.value
 # デフォルト値を設定
 scoreboard players set $multi temp 1000
 
-# もしあるなら実行
+# もしあるなら実行(この内部でmultiplyと今までの値をすべてかける)
 execute if data storage tusb_ad:api multiply[0] run function api:stat/calc/calc_multiply
-
-# 今までの値をmultiplyと掛け算
-# 先に計算先のスコアボードに代入
-execute store result score $input1 temp run scoreboard players get $modifier temp
-execute store result score $input2 temp run scoreboard players get $multi temp
-
-# かける
-function api:stat/calc/multi_digit
-
-# 値を戻す
-execute store result score $modifier temp run data get storage tusb_ad:api calc.value 10
-# リセット
-data remove storage tusb_ad:api calc.value
 
 # ここの時点でtotalを取る
 tellraw @a [{"score": {"name": "$modifier", "objective": "temp"}}, {"text": "が合計の値です"}]
@@ -65,7 +52,6 @@ execute store result storage tusb_ad:api return.modifier.total float 0.1 run sco
 
 
 # リセット
-
 scoreboard players reset $modifier temp
 scoreboard players reset $add temp
 scoreboard players reset $multi_base temp
