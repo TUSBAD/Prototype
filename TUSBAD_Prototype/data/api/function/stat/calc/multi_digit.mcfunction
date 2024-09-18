@@ -1,8 +1,6 @@
-#> api:check_overflow/test/multi
+#> api:stat/calc/multi_digit
 #
 # 最終的にこれを参考にしてステータスの計算をすることにする
-#
-# すでにapi:stat/calc/calc_modifierに移行済み
 
 # 例えば1234.5dmgを167.8%増加させたい時
 # そのまま掛けるとスコアボードの上限に引っかかってあれなのでこんな感じにする
@@ -29,26 +27,26 @@
 # 出力値は9999999.9まで
 
 # ここでの%補正はベース値の100%を足しているものとする
-data modify storage tusb_ad:api test_dmg set value 111.0f
-data modify storage tusb_ad:api test_rate set value 110.0f
-scoreboard players set $total_dmg temp 0
+#data modify storage tusb_ad:api test_dmg set value 111.0f
+#data modify storage tusb_ad:api test_rate set value 110.0f
 
-# dmgを10倍してスコアボードに
-execute store result score $input1 temp run data get storage tusb_ad:api test_dmg 10
+# リセット
+scoreboard players set $total_value temp 0
+
+# dmgを10倍してスコアボードに(inputで受け取っているものとする)
+#execute store result score $input1 temp run data get storage tusb_ad:api test_dmg 10
 # コピー作成
 scoreboard players operation $input1_temp temp = $input1 temp
 
 # %は10倍でスコアボードに入れ、数値的上限である8桁から%を割っていき、1以上の場合はその桁が有効であるため、
 # 割り算してその桁を抜き出す、抜き出してかけて計算したらその要素を削除し、次もその桁分で割ればよいかと。
 
-# まずは仮代入(同じく10倍)
-execute store result score $input2 temp run data get storage tusb_ad:api test_rate 10
-
+# rateを10倍してスコアボードに(inputで受け取っているものとする)
+#execute store result score $input2 temp run data get storage tusb_ad:api test_rate 10
 # コピー作成
 scoreboard players operation $input2_temp temp = $input2 temp
 
-# その後再帰関数にはいって桁数を特定する?
-# 下記関数は$digitと$input2をリセットしてないのでリセットする必要あり
+# その後再帰関数にはいって桁数を特定する
 function api:stat/calc/percentage/get_digit
 
 # 中身をもとに戻す
@@ -67,9 +65,9 @@ function api:stat/calc/percentage/calc
 
 # 終わったら計算結果が$total_dmg tempにはいっているのでそこからstorageに移してtellraw
 
-execute store result storage tusb_ad:api calc.value float 0.01 run scoreboard players get $total_dmg temp
-tellraw @a [{"text": "補正raw: "}, {"nbt": "test_dmg", "storage": "tusb_ad:api"}]
-tellraw @a [{"text": "補正%: "}, {"nbt": "test_rate", "storage": "tusb_ad:api"}]
+execute store result storage tusb_ad:api calc.value float 0.01 run scoreboard players get $total_value temp
+#tellraw @a [{"text": "補正raw: "}, {"nbt": "test_dmg", "storage": "tusb_ad:api"}]
+#tellraw @a [{"text": "補正%: "}, {"nbt": "test_rate", "storage": "tusb_ad:api"}]
 tellraw @a [{"text": "乗算の計算結果: "}, {"nbt": "calc.value", "storage": "tusb_ad:api"}]
 #tellraw @a [{"text": "計算値そのまま: "} , {"score": {"name": "$total_dmg", "objective": "temp"}}]
 
@@ -89,3 +87,4 @@ scoreboard players reset $10multi temp
 scoreboard players reset $single_rate temp
 scoreboard players reset $temp_10multi temp
 scoreboard players reset $temp_10multi_3 temp
+scoreboard players reset $total_value temp

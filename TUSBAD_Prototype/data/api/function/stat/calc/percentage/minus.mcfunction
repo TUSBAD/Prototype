@@ -7,10 +7,10 @@ scoreboard players operation $temp_10multi_3 temp = $10multi_3 temp
 scoreboard players operation $temp_10multi_3 temp *= $minus const
 
 # 計算
-scoreboard players operation $temp_dmg temp /= $temp_10multi_3 temp
+scoreboard players operation $input1_temp temp /= $temp_10multi_3 temp
 
 # 対応する桁の%を抜き出す
-scoreboard players operation $single_rate temp = $temp_rate temp
+scoreboard players operation $single_rate temp = $input2_temp temp
 scoreboard players operation $single_rate temp /= $10multi temp
 
 # リセット
