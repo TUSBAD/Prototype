@@ -27,7 +27,7 @@ function api:stat/calc/multi_digit
 # 値を戻す
 execute store result score $modifier temp run data get storage tusb_ad:api calc.value 10
 # リセット
-data remove storage tusb_ad:api calc.value
+data remove storage tusb_ad:api calc
 
 # multiplyの処理
 # デフォルト値を設定
@@ -56,3 +56,4 @@ scoreboard players reset $modifier temp
 scoreboard players reset $add temp
 scoreboard players reset $multi_base temp
 scoreboard players reset $multi temp
+data remove storage tusb_ad:api multiply

@@ -6,6 +6,7 @@
 # @input
 #   storage tusb_ad:api argument.add1
 #   storage tusb_ad:api argument.add2
+#   storage tusb_ad:api argument.scale
 # @output
 #   score $return temp
 
@@ -48,6 +49,8 @@ execute if score $addcheck temp matches 10 run say 実行しない
 execute if score $addcheck temp matches 11 run function api:check_overflow/add/positive
 
 # リセット
+data remove storage tusb_ad:api argument.add1
+data remove storage tusb_ad:api argument.add2
 data remove storage tusb_ad:api argument.scale
 scoreboard players reset $addcheck temp
 scoreboard players reset $add1 temp

@@ -12,5 +12,6 @@
     data remove storage tusb_ad:api modifier[-1]
 # リセット
     scoreboard players reset $is_success temp
+    data remove storage tusb_ad:api uuid
 # 要素が残ってたら再帰
     execute if data storage tusb_ad:api modifier[0] run function api:stat/remove_modifier

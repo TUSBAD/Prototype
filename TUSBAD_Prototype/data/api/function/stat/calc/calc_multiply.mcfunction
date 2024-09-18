@@ -23,7 +23,7 @@ function api:stat/calc/multi_digit
 # 値を戻す
 execute store result score $multi temp run data get storage tusb_ad:api calc.value 10
 # リセット
-data remove storage tusb_ad:api calc.value
+data remove storage tusb_ad:api calc
 
 # セット
 # 先に計算先のスコアボードに代入
@@ -36,7 +36,7 @@ function api:stat/calc/multi_digit
 # 値を戻す
 execute store result score $modifier temp run data get storage tusb_ad:api calc.value 10
 # リセット
-data remove storage tusb_ad:api calc.value
+data remove storage tusb_ad:api calc
 
 #scoreboard players operation $multi temp *= $temp temp
 #scoreboard players operation $modifier temp *= $multi temp

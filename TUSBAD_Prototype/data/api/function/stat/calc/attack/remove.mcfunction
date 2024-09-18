@@ -26,3 +26,5 @@ function #oh_my_dat:please
 # リセット
     data remove storage tusb_ad:api modifier
     data remove storage tusb_ad:api new_modifier
+    data remove storage tusb_ad:api temp_modifier
+    data remove storage tusb_ad:api return

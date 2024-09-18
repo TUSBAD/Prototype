@@ -6,6 +6,7 @@
 # @input
 #   storage tusb_ad:api argument.multi1
 #   storage tusb_ad:api argument.multi2
+#   storage tusb_ad:api argument.scale
 # @output
 #   score $return temp
 
@@ -48,6 +49,8 @@ execute if score $multicheck temp matches 10 run function api:check_overflow/mul
 execute if score $multicheck temp matches 11 run function api:check_overflow/multi/same/
 
 # リセット
+data remove storage tusb_ad:api argument.multi1
+data remove storage tusb_ad:api argument.multi2
 data remove storage tusb_ad:api argument.scale
 scoreboard players reset $multicheck temp
 scoreboard players reset $multi1 temp

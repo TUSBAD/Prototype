@@ -30,4 +30,8 @@ function api:stat/calc/calc_modifier
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].modifier.attack.physical merge from storage tusb_ad:api return.modifier
 
 # 中身を見たいので表示
-tellraw @a [{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].modifier.attack.physical", "storage": "oh_my_dat:"}, {"text": "がstorageの値です"}]
+#tellraw @a [{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].modifier.attack.physical", "storage": "oh_my_dat:"}, {"text": "がstorageの値です"}]
+
+# リセット
+data remove storage tusb_ad:api temp_modifier
+data remove storage tusb_ad:api return
