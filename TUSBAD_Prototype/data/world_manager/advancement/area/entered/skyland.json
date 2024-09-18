@@ -8,6 +8,6 @@
     }
   },
   "rewards": {
-    "function": "world_manager:entered/skyland"
+    "function": "world_manager:entered/newskyland"
   }
 }
