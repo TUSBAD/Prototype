@@ -4,6 +4,3 @@
 
 # 特定アイテム保有処理
 function api:trigger/item_hold
-
-
-advancement revoke @s only api:trigger/tick_trigger
