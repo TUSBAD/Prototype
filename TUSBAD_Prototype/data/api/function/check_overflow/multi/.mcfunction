@@ -9,6 +9,16 @@
 #   storage tusb_ad:api argument.scale
 # @output
 #   score $return temp
+#
+#> 変数定義
+#declare storage tusb_ad:api argument.multi1
+#declare storage tusb_ad:api argument.multi2
+#declare storage tusb_ad:api argument.scale
+#declare score $multi1 temp
+#declare score $multi2 temp
+#declare score $multicheck temp
+#
+# @api
 
 # inputされた値を比較します
 

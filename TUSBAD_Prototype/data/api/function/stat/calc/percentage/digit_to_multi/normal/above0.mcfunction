@@ -1,4 +1,8 @@
 #> api:stat/calc/percentage/digit_to_multi/normal/above0
+#
+# 桁数反映
+#
+# @within function api:stat/calc/percentage/digit_to_multi/normal/digit_to_multi10
 
 # 値が1より大きいので10倍します
 scoreboard players operation $10multi temp *= $10 const

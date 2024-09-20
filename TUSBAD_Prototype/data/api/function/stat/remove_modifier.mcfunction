@@ -1,4 +1,8 @@
 #> api:stat/remove_modifier
+#
+# modifierを削除します
+#
+# @within function api:stat/calc/attack/remove
 
 # 比較用にコピー
     data modify storage tusb_ad:api uuid set from storage tusb_ad:api argument.uuid

@@ -1,4 +1,8 @@
 #> api:stat/calc/calc_modifier
+#
+# modifierの計算を行います。
+#
+# @within function api:stat/**
 
 
 # 渡されたmodifierをaddします

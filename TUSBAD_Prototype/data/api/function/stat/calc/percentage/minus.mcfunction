@@ -1,6 +1,8 @@
 #> api:stat/calc/percentage/minus
 #
 # dmgに10^桁数-3でわる
+#
+# @within function api:stat/calc/percentage/calc 
 
 # 中身がマイナスなので一時的に+にして計算します
 scoreboard players operation $temp_10multi_3 temp = $10multi_3 temp

@@ -1,4 +1,6 @@
 #> api:stat/test/delete
+#
+# テストケース削除用
 
 # uuidをセット
 data modify storage tusb_ad:api argument.uuid set value [I;0,0,0,0]

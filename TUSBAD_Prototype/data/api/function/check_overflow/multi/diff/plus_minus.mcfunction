@@ -1,6 +1,22 @@
 #> api:check_overflow/multi/diff/plus_minus
 #
 # 左辺値がプラス、右辺値がマイナスの場合のオーバーフロー判定
+#
+# @input
+#   score $multi1 temp
+#   score $multi2 temp
+#   score $return temp
+# @output
+#   score $return temp
+#
+#> 変数定義
+#declare score $multi1 temp
+#declare score $multi2 temp
+#declare score $mintemp temp
+#declare storage tusb_ad:api return.overflow
+#declare score $system_min const
+#
+# @within function api:check_overflow/multi/
 
 # 左辺がプラス、右辺がマイナスの場合
 # a >= システム下限値 + bならオーバーフロー
@@ -13,8 +29,10 @@ execute store result score $mintemp temp run scoreboard players get $system_min 
 scoreboard players operation $mintemp temp /= $multi2 temp
 
 # a <= maxtempを比較し、オーバーフローならtrueを返す
-execute if score $multi1 temp >= $mintemp temp run scoreboard players set $return temp 1
-execute if score $multi1 temp <= $mintemp temp run scoreboard players set $return temp 0
+#execute if score $multi1 temp >= $mintemp temp run scoreboard players set $return temp 1
+#execute if score $multi1 temp <= $mintemp temp run scoreboard players set $return temp 0
+execute if score $multi1 temp >= $mintemp temp run data modify storage tusb_ad:api return.overflow set value true
+execute if score $multi1 temp <= $mintemp temp run data modify storage tusb_ad:api return.overflow set value false
 
 # 一応tellrawして中身を見る
 #tellraw @a [{"text": "aの中身: "},{"score":{"name": "$multi1", "objective": "temp"}}]

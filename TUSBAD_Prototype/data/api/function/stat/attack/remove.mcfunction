@@ -2,6 +2,9 @@
 #
 # 指定したuuidの攻撃力データを削除します。
 #
+# @input 
+#   storage tusb_ad:api argument.uuid
+#       削除したいステータスの識別用uuid
 # @api
 
 

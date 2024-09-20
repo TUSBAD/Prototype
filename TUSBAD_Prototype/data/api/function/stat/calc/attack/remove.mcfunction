@@ -1,4 +1,8 @@
 #> api:stat/calc/attack/remove
+#
+# 引数をohmydatのリストに加え、それらを一時storageに代入し計算部分に入ります。
+#
+# @within function api:stat/attack/remove
 
 
 
@@ -27,4 +31,4 @@ function #oh_my_dat:please
     data remove storage tusb_ad:api modifier
     data remove storage tusb_ad:api new_modifier
     data remove storage tusb_ad:api temp_modifier
-    data remove storage tusb_ad:api return
+    data remove storage tusb_ad:api return.modifier

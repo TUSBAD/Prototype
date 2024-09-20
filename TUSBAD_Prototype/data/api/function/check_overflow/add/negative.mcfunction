@@ -1,4 +1,22 @@
 #> api:check_overflow/add/negative
+#
+# マイナス + マイナスのときオーバーフローするかをチェックします。
+#
+# @input
+#    score $add1 temp
+#    score $add2 temp
+# @output
+#    score $return temp
+#
+#> 変数定義
+#declare score $add1 temp
+#declare score $add2 temp
+#declare storage tusb_ad:api return.overflow
+#declare score $mintemp temp
+#declare score $system_min const
+#
+# @within function api:check_overflow/add/
+
 
 # A <= 最小値 - Bでオーバーフロー?
 
@@ -18,5 +36,7 @@ scoreboard players operation $mintemp temp -= $add2 temp
 #tellraw @a [{"text": "bの中身: "},{"score":{"name": "$mintemp", "objective": "temp"}}]
 
 # A <= mintempを比較し、オーバーフローならtrueを返す
-execute if score $add1 temp <= $mintemp temp run scoreboard players set $return temp 1
-execute if score $add1 temp >= $mintemp temp run scoreboard players set $return temp 0
+#execute if score $add1 temp <= $mintemp temp run scoreboard players set $return temp 1
+#execute if score $add1 temp >= $mintemp temp run scoreboard players set $return temp 0
+execute if score $add1 temp <= $mintemp temp run data modify storage tusb_ad:api return.overflow set value true
+execute if score $add1 temp >= $mintemp temp run data modify storage tusb_ad:api return.overflow set value false

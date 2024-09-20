@@ -2,7 +2,7 @@
 #
 # 引数をohmydatのリストに加え、それらを一時storageに代入し計算部分に入ります。
 #
-# @declare function api:stat/attack/add
+# @within function api:stat/attack/add
 
 
 # 呼び出し
@@ -34,4 +34,4 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].modifier.attack
 
 # リセット
 data remove storage tusb_ad:api temp_modifier
-data remove storage tusb_ad:api return
+data remove storage tusb_ad:api return.modifier

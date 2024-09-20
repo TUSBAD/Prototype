@@ -1,6 +1,10 @@
 #> api:stat/calc/percentage/get_digit
 #
 # $input2 tempを再起で/10して桁数を特定します
+#
+# @within function 
+#   api:stat/calc/percentage/get_digit
+#   api:stat/calc/multi_digit
 
 # /10
 scoreboard players operation $input2_temp temp /= $10 const

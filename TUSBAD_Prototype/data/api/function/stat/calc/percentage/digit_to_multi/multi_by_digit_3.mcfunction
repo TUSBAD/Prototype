@@ -1,6 +1,10 @@
 #> api:stat/calc/percentage/digit_to_multi/multi_by_digit_3
 #
 # 10^桁数-3を求めます(割分厘表現して計算するからその時の整数部で計算する時に必要)
+#
+# @within function
+#    api:stat/calc/percentage/calc
+#    api:stat/calc/multi_digit
 
 # スコアボード作成
 execute store result score $digit_3 temp run scoreboard players get $digit temp

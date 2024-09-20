@@ -1,6 +1,8 @@
 #> api:stat/calc/multiply_base
 #
 # multiply_baseの計算をする
+#
+# @within function api:stat/separate_modifier
 
 # 値を持ってくる
 execute store result score $temp temp run data get storage tusb_ad:api test_op.amount 10
@@ -17,11 +19,14 @@ tellraw @a [{"score": {"name": "$multi_base", "objective": "temp"}}, {"text": "�
 # 確認
 function api:check_overflow/add/
 # スコアボードを確認し、オーバーフローしていないなら足す
-execute if score $return temp matches 0 run scoreboard players operation $multi_base temp += $temp temp
+#execute if score $return temp matches 0 run scoreboard players operation $multi_base temp += $temp temp
+execute if data storage tusb_ad:api {return:{overflow:false}} run scoreboard players operation $multi_base temp += $temp temp
 
 # オーバーフローしてるなら値を最大値に設定
-execute if score $return temp matches 1 run scoreboard players operation $multi_base temp = $system_max const
+#execute if score $return temp matches 1 run scoreboard players operation $multi_base temp = $system_max const
+execute if data storage tusb_ad:api {return:{overflow:true}} run scoreboard players operation $multi_base temp = $system_max const
 
 # リセット
-scoreboard players reset $return temp
+#scoreboard players reset $return temp
+data remove storage tusb_ad:api return.overflow
 scoreboard players reset $temp temp

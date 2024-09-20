@@ -1,6 +1,8 @@
 #> api:stat/calc/percentage/calc
 #
 # $10multi tempをdmgにかけ、その値を%の単一とかける
+#
+# @within function api:stat/calc/multi_digit
 
 # dmgに10^桁数-3をかける
 # 0.の時対応がスコアボードに-はいってるんでそれで処理が分岐する形に
@@ -17,12 +19,15 @@ execute if score $digit_3 temp matches ..0 run function api:stat/calc/percentage
     function api:check_overflow/multi/
 
     # dmg x 対応する桁の%
-    execute if score $return temp matches 0 run scoreboard players operation $input1_temp temp *= $single_rate temp
+    #execute if score $return temp matches 0 run scoreboard players operation $input1_temp temp *= $single_rate temp
+    execute if data storage tusb_ad:api {return:{overflow:false}} run scoreboard players operation $input1_temp temp *= $single_rate temp
     # オーバーフローしているなら最大値に
-    execute if score $return temp matches 1 run scoreboard players operation $input1_temp temp = $system_max const
+    #execute if score $return temp matches 1 run scoreboard players operation $input1_temp temp = $system_max const
+    execute if data storage tusb_ad:api {return:{overflow:true}} run scoreboard players operation $input1_temp temp = $system_max const
 
     # リセット
-    scoreboard players reset $return temp
+    #scoreboard players reset $return temp
+    data remove storage tusb_ad:api return.overflow
 
 # トータルのダメージを加算
 
@@ -35,12 +40,15 @@ execute if score $digit_3 temp matches ..0 run function api:stat/calc/percentage
     function api:check_overflow/add/
     
     # 実行
-    execute if score $return temp matches 0 run scoreboard players operation $total_value temp += $input1_temp temp
+    #execute if score $return temp matches 0 run scoreboard players operation $total_value temp += $input1_temp temp
+    execute if data storage tusb_ad:api {return:{overflow:false}} run scoreboard players operation $total_value temp += $input1_temp temp
     # オーバーフローしているなら最大値に
-    execute if score $return temp matches 1 run scoreboard players operation $total_value temp = $system_max const
+    #execute if score $return temp matches 1 run scoreboard players operation $total_value temp = $system_max const
+    execute if data storage tusb_ad:api {return:{overflow:true}} run scoreboard players operation $total_value temp = $system_max const
 
     # リセット
-    scoreboard players reset $return temp
+    #scoreboard players reset $return temp
+    data remove storage tusb_ad:api return.overflow
 
 # 対応する桁x%だけ%から減算
 scoreboard players operation $temp_10multi temp = $10multi temp

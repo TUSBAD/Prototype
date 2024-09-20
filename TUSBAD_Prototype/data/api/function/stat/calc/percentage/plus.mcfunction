@@ -1,6 +1,8 @@
 #> api:stat/calc/percentage/plus
 #
 # dmgに10^桁数-3をかける
+#
+# @within function api:stat/calc/percentage/calc
 
 # 引数セット
 data modify storage tusb_ad:api argument.scale set value 1
@@ -10,12 +12,15 @@ execute store result storage tusb_ad:api argument.multi2 int 1 run scoreboard pl
 function api:check_overflow/multi/
 
 # オーバーフローしてないなら計算
-execute if score $return temp matches 0 run scoreboard players operation $input1_temp temp *= $10multi_3 temp
+#execute if score $return temp matches 0 run scoreboard players operation $input1_temp temp *= $10multi_3 temp
+execute if data storage tusb_ad:api {return:{overflow:false}} run scoreboard players operation $input1_temp temp *= $10multi_3 temp
 # オーバーフローしているなら最大値にセット
-execute if score $return temp matches 1 run scoreboard players operation $10multi_3 temp = $system_max const
+#execute if score $return temp matches 1 run scoreboard players operation $10multi_3 temp = $system_max const
+execute if data storage tusb_ad:api {return:{overflow:true}} run scoreboard players operation $10multi_3 temp = $system_max const
 
 # リセット
-scoreboard players reset $return temp
+#scoreboard players reset $return temp
+data remove storage tusb_ad:api return.overflow
 
 # 対応する桁の%を抜き出す
 scoreboard players operation $single_rate temp = $input2_temp temp

@@ -1,4 +1,8 @@
 #> api:stat/separate_modifier
+#
+# modifierを分割してそれぞれ計算します
+#
+# @within function api:stat/calc/calc_modifier
 
 
 # 仮storageから単一データだけを抜き出して持ってくる

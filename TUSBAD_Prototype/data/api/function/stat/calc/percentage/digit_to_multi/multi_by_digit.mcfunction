@@ -1,11 +1,10 @@
 #> api:stat/calc/percentage/digit_to_multi/multi_by_digit
 #
 # 10^桁数を求めます
+#
+# @within function api:stat/calc/multi_digit
 
-# -1
-#scoreboard players operation $digit temp -= $1 const
-#scoreboard players operation $temp_digit temp = $digit temp
-
+# 数字をそのままコピー
 execute store result score $temp_digit temp run scoreboard players get $digit temp
 scoreboard players set $10multi temp 1
 

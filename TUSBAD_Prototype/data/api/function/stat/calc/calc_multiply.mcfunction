@@ -4,6 +4,7 @@
 #
 # @within function 
 #   api:stat/calc/calc_multiply
+#   api:stat/calc/calc_modifier
 
 # 値を取得
 execute store result score $temp temp run data get storage tusb_ad:api multiply[-1] 10
