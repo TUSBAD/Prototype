@@ -5,7 +5,6 @@
 # @within function api:stat/attack/remove
 
 
-
 # 呼び出し
 function #oh_my_dat:please
 
