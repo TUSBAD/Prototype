@@ -1,0 +1,7 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "player_interacted_with_entity"
+        }
+    }
+}
