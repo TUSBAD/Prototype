@@ -1,5 +1,6 @@
 {
     "values": [
-        "api:load"
+        "api:tick",
+        "gui:main/tick/"
     ]
 }

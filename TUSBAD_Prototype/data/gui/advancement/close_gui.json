@@ -1,7 +1,18 @@
 {
     "criteria": {
         "trigger": {
-            "trigger": "inventory_changed"
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "components": {
+                            "custom_data": {
+                                "close_detector_item":true
+                            }
+                        }
+                    }
+                ]
+            }
         }
     }
 }

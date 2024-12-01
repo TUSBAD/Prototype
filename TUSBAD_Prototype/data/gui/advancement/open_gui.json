@@ -1,7 +1,13 @@
 {
     "criteria": {
         "trigger": {
-            "trigger": "player_interacted_with_entity"
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart]}"
+                }
+            }
         }
     }
 }

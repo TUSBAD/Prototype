@@ -5,8 +5,10 @@
         "type_specific": {
             "type": "player",
             "looking_at": {
-                "type": "villager",
-                "nbt": "{Tags:[GUI]}"
+                "nbt": "{Tags:[GUI]}",
+                "distance": {
+                    "absolute": 6
+                }
             }
         }
     }
