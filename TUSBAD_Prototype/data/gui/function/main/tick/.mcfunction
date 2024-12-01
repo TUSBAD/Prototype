@@ -1,5 +1,8 @@
 #> gui:main/tick/
 #
-# GUIに対するtick処理
+# ワールド側のtick処理
 #
-# @within function gui:player/tick
+# @within tag/function minecraft:tick
+
+# GUIにtickを実行させる
+    execute as @e[tag=GUI.Entity] run function gui:main/tick/gui_minecart
