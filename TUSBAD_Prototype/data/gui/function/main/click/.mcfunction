@@ -4,11 +4,11 @@
 #
 # @within function gui:main/tick/gui_minecart
 
-# custom_dataはgui_item:trueを使って
-
 # 変更されたスロットを取得(別functionで、リストの形で取得)
+    function gui:main/click/slot/get
 
 # slot_loop
-    execute if data storage gui: slots[0] run function gui:main/click/slot_loop
+    execute if data storage gui: slots[0] run function gui:main/click/slot/loop
 
 # clear(最後なのは途中でカーソルにGUIアイテムがあるかどうか判定するから)
+    
