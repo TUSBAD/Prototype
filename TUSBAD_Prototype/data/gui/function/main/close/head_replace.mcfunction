@@ -9,4 +9,4 @@
 # close_detectorタグを削除
     data remove storage gui: close_detector_item.components."minecraft:custom_data".close_detector_item
 # item_modifierを適応
-    item modify entity @s armor.head gui:close_detector_item_remove
+    item modify entity @s armor.head gui:close_detector_tag_remove

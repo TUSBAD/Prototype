@@ -1,13 +1,161 @@
 {
     "criteria": {
-        "trigger": {
+        "0.0": {
             "trigger": "player_interacted_with_entity",
             "conditions": {
                 "entity": {
                     "type": "chest_minecart",
-                    "nbt": "{Tags:[GUI.Minecart]}"
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag0.0]}"
+                }
+            }
+        },
+        "0.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag0.1]}"
+                }
+            }
+        },
+        "1.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag1.0]}"
+                }
+            }
+        },
+        "1.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag1.1]}"
+                }
+            }
+        },
+        "2.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag2.0]}"
+                }
+            }
+        },
+        "2.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag2.1]}"
+                }
+            }
+        },
+        "3.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag3.0]}"
+                }
+            }
+        },
+        "3.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag3.1]}"
+                }
+            }
+        },
+        "4.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag4.0]}"
+                }
+            }
+        },
+        "4.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag4.1]}"
+                }
+            }
+        },
+        "5.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag5.0]}"
+                }
+            }
+        },
+        "5.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag5.1]}"
+                }
+            }
+        },
+        "6.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag6.0]}"
+                }
+            }
+        },
+        "6.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag6.1]}"
+                }
+            }
+        },
+        "7.0": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag7.0]}"
+                }
+            }
+        },
+        "7.1": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "chest_minecart",
+                    "nbt": "{Tags:[GUI.Minecart,FindFlag7.1]}"
                 }
             }
         }
+    },
+    "requirements": [
+        ["0.0","0.1"],
+        ["1.0","1.1"],
+        ["2.0","2.1"],
+        ["3.0","3.1"],
+        ["4.0","4.1"],
+        ["5.0","5.1"],
+        ["6.0","6.1"],
+        ["7.0","7.1"]
+    ],
+    "rewards": {
+        "function": "gui:main/open/"
     }
 }
