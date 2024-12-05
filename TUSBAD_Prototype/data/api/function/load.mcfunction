@@ -10,6 +10,9 @@ scoreboard players set $int_min const -2147483648
 scoreboard players set $system_max const 999999999
 scoreboard players set $system_min const -999999999
 scoreboard players set $minus const -1
+scoreboard players set $2^8 const 256
+scoreboard players set $2^16 const 65536
+scoreboard players set $2^24 const 16777216
 
 # 取得用
 
