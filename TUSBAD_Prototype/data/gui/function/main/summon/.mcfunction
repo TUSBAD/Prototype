@@ -2,8 +2,10 @@
 #
 # 自身に紐づいたGUIを召喚、或いは既にあるものをTPするよ
 #
-# @within function gui:player/see_villager
+# @input as player
 # @writes storage gui: test
+# @within function gui:player/see_villager
+
 
 # set_tag
     function gui:main/set_tag

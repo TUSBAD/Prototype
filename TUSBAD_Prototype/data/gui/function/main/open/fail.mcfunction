@@ -2,6 +2,7 @@
 #
 # 判定失敗時
 #
+# @input as player
 # @within function gui:main/open/
 
 # トリガーを再有効化

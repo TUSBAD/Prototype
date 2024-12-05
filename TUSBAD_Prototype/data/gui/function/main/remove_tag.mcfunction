@@ -2,6 +2,7 @@
 #
 # 自身と自身に紐付いたGUIにtagを付けます
 #
+# @input as player
 # @within function gui:**
 
 # tagを消す

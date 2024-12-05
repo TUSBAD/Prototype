@@ -2,6 +2,8 @@
 #
 # アイテムを戻す
 #
+# @input as gui.minecart
+# @input macro with gui: slots[0]
 # @within function gui:main/click/slot/gui_item
 
 # そこにあるアイテムを取得

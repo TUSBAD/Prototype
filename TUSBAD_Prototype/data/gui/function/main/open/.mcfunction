@@ -2,6 +2,7 @@
 #
 # GUIを開いた時の処理
 #
+# @input as player
 # @within advancement gui:open_gui
 
 # idを確認

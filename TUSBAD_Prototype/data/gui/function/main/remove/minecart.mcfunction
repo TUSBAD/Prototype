@@ -2,6 +2,7 @@
 #
 # トロッコ側の処理
 #
+# @input as gui.minecart
 # @within function gui:main/remove/
 
 # ohmydatを解放

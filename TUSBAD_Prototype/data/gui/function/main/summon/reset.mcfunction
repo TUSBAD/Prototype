@@ -2,6 +2,7 @@
 #
 # GUIをリセットする
 #
+# @input as gui.minecart
 # @within function gui:main/summon/
 
 # test:true
@@ -12,4 +13,4 @@
 # Motionを付与
     data modify entity @s Motion set from entity @p[tag=gui.player.this]
 # interactionをtp
-    execute at @s as @e[type=interaction,tag=gui.interaction] if score @s player_id = _ player_id
+    execute at @s as @e[type=interaction,tag=gui.interaction.this] run tp @s ~ ~ ~

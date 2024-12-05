@@ -2,6 +2,7 @@
 #
 # interactionを削除する
 #
+# @input as gui.interaction
 # @within function gui:main/remove/
 
 

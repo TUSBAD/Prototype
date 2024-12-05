@@ -2,6 +2,7 @@
 #
 # 頭のアイテムのtagを消す
 #
+# @input as player
 # @within function gui:main/close/
 
 # データを取得

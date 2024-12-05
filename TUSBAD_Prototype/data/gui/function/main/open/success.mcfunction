@@ -2,6 +2,7 @@
 #
 # 判定成功時
 #
+# @input as player
 # @within function gui:main/open/
 
 # set_tag

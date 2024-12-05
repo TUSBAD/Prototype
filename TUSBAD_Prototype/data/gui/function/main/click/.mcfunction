@@ -2,6 +2,7 @@
 #
 # GUIトロッコのItemsが変わっていた時の処理
 #
+# @input as gui.minecart
 # @within function gui:main/tick/gui_minecart
 
 # 変更されたスロットを取得(別functionで、リストの形で取得)

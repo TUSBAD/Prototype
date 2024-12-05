@@ -2,6 +2,7 @@
 #
 # GUI閉じた時の処理
 #
+# @input as player
 # @within advancement gui:close_gui
 
 # ohmydat

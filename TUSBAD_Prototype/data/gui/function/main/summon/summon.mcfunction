@@ -1,7 +1,8 @@
 #> gui:main/summon/summon
 #
-# 召喚する
+# gui.entityを召喚する
 #
+# @input as player
 # @within function gui:main/summon/
 
 # 視線の位置にトロッコとinteractionを召喚

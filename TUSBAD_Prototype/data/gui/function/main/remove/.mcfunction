@@ -1,8 +1,8 @@
 #> gui:main/remove/
 #
 # 紐づいたGUIを安全に消滅させる
-# 実行者はプレイヤー
 #
+# @input as player
 # @within function gui:**
 
 # set_tag
