@@ -5,13 +5,13 @@
 #
 # @within function gui:**
 
-# Thisを付与
-    tag @s add This
+# set_tag
+    function gui:main/set_tag
 
 # トロッコ
-    execute as @e[type=chest_minecart,tag=GUI.Minecart] if score @s player_id = @p[tag=This] player_id run function gui:main/remove/minecart
+    execute as @e[type=chest_minecart,tag=gui.minecart.this] run function gui:main/remove/minecart
 # interaction
-    execute as @e[type=interaction,tag=GUI.Interaction] if score @s player_id = @p[tag=This] player_id run function gui:main/remove/interaction
+    execute as @e[type=interaction,tag=gui.interaction.this] run function gui:main/remove/interaction
 
-# Thisを削除
-    tag @s remove This
+# remove_tag
+    function gui:main/remove_tag

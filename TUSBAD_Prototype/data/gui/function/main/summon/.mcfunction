@@ -5,14 +5,14 @@
 # @within function gui:player/see_villager
 # @writes storage gui: test
 
-# Thisを付与
-    tag @s add This
+# set_tag
+    function gui:main/set_tag
 
 # 探索
     data modify storage gui: test set value false
-    execute as @e[type=chest_minecart,tag=GUI.Minecart,tag=!GUI.Opened] if score @s player_id = _ player_id store success storage gui: test byte 1 run function gui:main/summon/reset
+    execute as @e[type=chest_minecart,tag=gui.minecart.this] run function gui:main/summon/reset
 # いなかったら召喚
     execute if data storage gui: {test:true} run function gui:main/summon/summon
 
-# Thisを外す
-    tag @s remove This
+# remove_tag
+    function gui:main/remove_tag

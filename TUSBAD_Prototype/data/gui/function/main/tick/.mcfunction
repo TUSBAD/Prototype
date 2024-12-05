@@ -5,4 +5,4 @@
 # @within tag/function minecraft:tick
 
 # GUIにtickを実行させる
-    execute as @e[tag=GUI.Entity] run function gui:main/tick/gui_minecart
+    execute as @e[tag=gui.entity] run function gui:main/tick/gui_minecart
