@@ -15,5 +15,5 @@
     # 被ってたらmodify
             # execute if items entity @s armor.head * run item modify entity @s armor.head gui:close_detector_tag_apply
 
-# トロッコの処理を実行
+# GUIの種類に応じた共通処理を実行
     execute if entity @e[type=chest_minecart,tag=gui.minecart.this,tag=gui.shop,limit=1] run function gui:shop/open/
