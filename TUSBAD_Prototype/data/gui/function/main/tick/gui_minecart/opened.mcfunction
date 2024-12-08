@@ -1,4 +1,4 @@
-#> gui:main/tick/gui_minecart
+#> gui:main/tick/gui_minecart/
 #
 # GUIトロッコのtick処理
 #
