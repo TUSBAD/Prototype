@@ -8,4 +8,4 @@
 # GUI持ちentityを見てたらGUIを召喚
     execute if predicate gui:see_gui_entity run function gui:main/summon/
 # 見てなかったらGUIを消す
-    execute unless predicate gui:see_gui_entity run function gui:main/remove/
+    execute unless predicate gui:see_gui_entity unless entity @s[advancements={gui:open_gui=true}] run function gui:main/remove/
