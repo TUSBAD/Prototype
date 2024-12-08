@@ -21,7 +21,7 @@
     function gui:main/close/return_item
 
 # GUIの種類に応じた共通処理を実行
-    execute if entity @e[type=chest_minecart,tag=gui.this.minecart,tag=gui.shop,limit=1] run function gui:shop/close/
+    execute if entity @e[type=chest_minecart,tag=gui.minecart.this,tag=gui.shop,limit=1] run function gui:shop/close/
 
 
 # 要らないっぽい？
@@ -32,7 +32,7 @@
         # execute unless items entity @s armor.head stone_button[custom_data={close_detector_item:true}] unless items entity @s armor.head *[custom_data={close_detector_item:true}] run function gui:main/close/head_replace
 
 # トロッコのtagを削除し、remove
-    tag @e[type=chest_minecart,tag=gui.this.minecart,tag=gui.minecart] remove gui.this.minecart
+    tag @e[type=chest_minecart,tag=gui.minecart.this,tag=gui.minecart] remove gui.minecart.this
     function gui:main/remove/
 
 # トリガーを再有効化
