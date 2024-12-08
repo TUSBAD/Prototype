@@ -4,7 +4,7 @@
 #
 # @input as player
 # @writes storage gui: test
-# @within function gui:player/see_villager
+# @within function gui:main/tick/player
 
 
 # set_tag
