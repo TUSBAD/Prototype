@@ -5,7 +5,7 @@
         "type_specific": {
             "type": "player",
             "looking_at": {
-                "nbt": "{Tags:[GUI]}",
+                "nbt": "{Tags:[gui.has]}",
                 "distance": {
                     "absolute": 6
                 }
