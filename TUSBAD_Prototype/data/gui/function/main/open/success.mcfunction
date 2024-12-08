@@ -8,6 +8,9 @@
 # set_tag
     function gui:main/set_tag
 
+# トロッコに開いたtagを付ける
+    tag @e[type=chest_minecart,tag=gui.minecart.this,limit=1] add gui.minecart.opened
+
 # 要らないっぽい？
     # 頭に検知用アイテムを被せる
         # 何も被ってなかったら石ボタン
