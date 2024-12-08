@@ -11,6 +11,6 @@
 # 視線の位置にtp
     execute at @p[tag=gui.player.this] anchored eyes run tp @s ^ ^ ^
 # Motionを付与
-    data modify entity @s Motion set from entity @p[tag=gui.player.this]
+    data modify entity @s Motion set from entity @p[tag=gui.player.this] Motion
 # interactionをtp
     execute at @s as @e[type=interaction,tag=gui.interaction.this] run tp @s ~ ~ ~
