@@ -2,7 +2,7 @@
 #
 # トロッコ側を実行者として消滅させます
 #
-# @within function gui:main/tick/gui_minecart/
+# @within function gui:**
 
 # 紐付いたinteractionを削除
     scoreboard players operation _ player_id = @s player_id
