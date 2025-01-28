@@ -2,7 +2,7 @@
 # macroで読み取った値を元に体力をセットします
 
 
-$attribute @s minecraft:generic.max_absorption modifier add ee3b6c11-8fcb-48ba-a279-e8458492890c "HelathSetter" $(Output) add
+$attribute @s minecraft:max_absorption modifier add ee3b6c11-8fcb-48ba-a279-e8458492890c "HelathSetter" $(Output) add
 
 # 回復して指定した体力にする
 # (該当mobがアンデットがどうか判定する必要あり+エフェクトの値254でいいかの確認)

@@ -14,7 +14,7 @@
 
 # damage @p[tag=Applyed] 0.0001
 
-attribute @p[tag=applyed] generic.max_absorption modifier remove ee3b6c11-8fcb-48ba-a279-e8458492890c
+attribute @p[tag=applyed] max_absorption modifier remove ee3b6c11-8fcb-48ba-a279-e8458492890c
 
 say removed
 

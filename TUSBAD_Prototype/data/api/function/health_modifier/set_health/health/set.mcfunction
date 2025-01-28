@@ -11,7 +11,7 @@
 execute if score @s set_health_amount matches 0 run kill @s
 execute if score @s set_health_amount matches 0 run return fail
 
-$attribute @s minecraft:generic.max_health modifier add helath_setter $(modify_health) add_value
+$attribute @s minecraft:max_health modifier add helath_setter $(modify_health) add_value
 
 # ダメージ受けた演出をいれる(AECじゃないと1tick無敵無理だからこっちかなぁ)
 

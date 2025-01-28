@@ -8,7 +8,7 @@
 
 
 # 体力をセット
-$attribute @s minecraft:generic.max_health modifier add heal_setter $(modify_health) add_value
+$attribute @s minecraft:max_health modifier add heal_setter $(modify_health) add_value
 
 
 # 回復して指定した体力にする

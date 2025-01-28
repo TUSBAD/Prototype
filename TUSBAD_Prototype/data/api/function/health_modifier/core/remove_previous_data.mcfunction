@@ -12,7 +12,7 @@
 # attributeを削除する
 
 # set_healthの
-attribute @s generic.max_health modifier remove health_setter
+attribute @s max_health modifier remove health_setter
 # healの
-attribute @s generic.max_health modifier remove heal_setter
+attribute @s max_health modifier remove heal_setter
 # damageの(いらないか?)

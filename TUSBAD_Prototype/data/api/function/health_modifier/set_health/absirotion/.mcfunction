@@ -5,7 +5,7 @@
 # データを取得します
 
 # 最大体力はdouble
-execute store result storage tusb_ad:api max_absorption double 100 run attribute @s generic.max_absorption get 1
+execute store result storage tusb_ad:api max_absorption double 100 run attribute @s max_absorption get 1
 # スコアボードに代入
 execute store result score @s max_absorption_amount run data get storage tusb_ad:api max_absorption
 # 現在体力はfloat

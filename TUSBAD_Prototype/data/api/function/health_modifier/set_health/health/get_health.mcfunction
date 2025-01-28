@@ -5,4 +5,4 @@
 # @within function api:health_modifier/set_health/health/
 
 # スコアボードに代入
-execute store result score @s max_health run attribute @s generic.max_health get 100
+execute store result score @s max_health run attribute @s max_health get 100

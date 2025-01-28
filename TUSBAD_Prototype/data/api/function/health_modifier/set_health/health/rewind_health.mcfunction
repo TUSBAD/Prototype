@@ -5,7 +5,7 @@
 # @within function api:health_modifier/set_health/health/schedule
 
 # attributeの削除
-attribute @s generic.max_health modifier remove helath_setter
+attribute @s max_health modifier remove helath_setter
 
 # リセット
 tag @s remove set_applied
