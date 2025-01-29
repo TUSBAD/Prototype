@@ -32,7 +32,6 @@
         # execute unless items entity @s armor.head stone_button[custom_data={close_detector_item:true}] unless items entity @s armor.head *[custom_data={close_detector_item:true}] run function gui:main/close/head_replace
 
 # トロッコのtagを削除し、remove
-    tag @e[type=chest_minecart,tag=gui.minecart.this,tag=gui.minecart] remove gui.minecart.this
     function gui:main/remove/
 
 # トリガーを再有効化

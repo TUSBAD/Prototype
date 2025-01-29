@@ -4,20 +4,23 @@
 # アイテム入れる時とかはこーしないとだからね
 #
 # @input 
-#   as gui.minecart
-#   storage gui: slots
-# @output gui: gui_item
+#   storage gui: slots : list
 # @within function
 #   gui:main/click/
 #   gui:main/click/loop
 
 # 元のアイテムにcustom_dataがあればそれに応じて処理を実行(別functionで)
-    data remove storage gui: gui_item
-    data modify storage gui: gui_item set from storage gui: slots[0].components."custom_data".gui_item
-    execute if data storage gui: gui_item run function gui:main/click/slot/gui_item
-    execute unless data storage gui: gui_item run function gui:main/click/slot/non_gui_item
+    # アイテムのcustom_dataを取り出し
+        data modify storage gui: gui_item set from storage gui: slots[0].components."custom_data".gui_item
+    # gui_item
+        execute if data storage gui: gui_item run function gui:main/click/slot/gui_item
+    # 非gui_item
+        execute unless data storage gui: gui_item run function gui:main/click/slot/non_gui_item
+    # reset
+        data remove storage gui: gui_item
 
-# 元のアイテムがなければアイテムを入れるスロットだから、その処理をする(今はないからやらなくていいよ)
+
+# 元のアイテムがなければアイテムを入れるスロットだから、その処理をする
 
 # 要素を削除しまだ残っていれば再帰
     data remove storage gui: slots[0]
