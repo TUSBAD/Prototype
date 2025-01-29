@@ -6,7 +6,7 @@
 # @within function gui:main/open/
 
 # set_tag
-    function gui:main/set_tag
+    function gui:main/tag/set_as_player
 
 # トロッコに開いたtagを付ける
     tag @e[type=chest_minecart,tag=gui.minecart.this,limit=1] add gui.minecart.opened

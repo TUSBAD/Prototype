@@ -1,4 +1,4 @@
-#> gui:main/remove_tag
+#> gui:main/tag/remove
 #
 # 自身と自身に紐付いたGUIにtagを付けます
 #

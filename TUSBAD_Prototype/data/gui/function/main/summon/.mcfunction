@@ -8,7 +8,7 @@
 
 
 # set_tag
-    function gui:main/set_tag
+    function gui:main/tag/set_as_player
 
 # 探索
     data modify storage gui: test set value false
@@ -17,4 +17,4 @@
     execute if data storage gui: {test:true} run function gui:main/summon/summon
 
 # remove_tag
-    function gui:main/remove_tag
+    function gui:main/tag/remove

@@ -15,7 +15,7 @@
     execute if data storage gui: {test:true} run return fail
 
 # set_tag
-    function gui:main/set_tag
+    function gui:main/tag/set_as_player
 
 # アイテムを返却
     function gui:main/close/return_item

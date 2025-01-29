@@ -6,7 +6,7 @@
 # @within function gui:main/summon/
 
 # 視線の位置にトロッコとinteractionを召喚
-    execute anchored eyes positioned ^ ^ ^ run summon chest_minecart ~ ~ ~ {Tags:[gui.entity,gui.minecart,gui.init,invisible_minecart],Invulnerable:true,NoGravity:true}
+    execute anchored eyes positioned ^ ^ ^ run summon chest_minecart ~ ~ ~ {Tags:[gui.entity,gui.minecart,gui.init],Invulnerable:true,NoGravity:true,CustomDisplayTile:true,DisplayState:{Name:"air"}}
     execute anchored eyes positioned ^ ^ ^ run summon interaction ~ ~ ~ {Tags:[gui.entity,gui.interaction,gui.init],width:1,height:1}
 
 # scoreを設定
