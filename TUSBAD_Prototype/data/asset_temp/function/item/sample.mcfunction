@@ -1,6 +1,9 @@
 #> asset_temp:item/sample
 # アイテムテンプレート用のサンプル
 
+### 残っているデータを一度クリーンアップする
+data remove storage tusb_ad: asset_temp
+
 ### 元となるアイテム : 文字列
 #data modify storage tusb_ad:asset_temp base_item set value $ここに元となるアイテムのIDを入力
 data modify storage tusb_ad:asset_temp base_item set value "minecraft:iron_ingot"
@@ -16,7 +19,6 @@ data modify storage tusb_ad:asset_temp display_name set value "快眠まくら"
 ### アイテム説明 : Jsonテキストリスト
 #data modify storage tusb_ad:asset_temp description set value $ここに説明を入力
 data modify storage tusb_ad:asset_temp description set value ["§cよく眠れる","快眠まくら。"]
-
 
 ### 見た目（カスタムモデルデータID） : 整数
 #data modify storage tusb_ad:asset_temp custommodel_id set value $ここにCMDのIDを入力
@@ -40,3 +42,5 @@ data modify storage tusb_ad:asset_temp description set value ["§cよく眠れ�
 
 ###消費スロット数
 #data modify storage tusb_ad:asset_temp item_modify.needs_slot set value $ここに改造時消費されるスロット数を入力
+
+function asset_manager:item/converter
