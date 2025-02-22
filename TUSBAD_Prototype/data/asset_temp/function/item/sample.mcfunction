@@ -4,6 +4,14 @@
 ### 残っているデータを一度クリーンアップする
 data remove storage tusb_ad: asset_temp
 
+
+
+### アイテム：重要項目
+##################################################################################################
+
+### AD上でのアイテム種別 : 文字列
+data modify storage tusb_ad: asset_temp.item_type set value "example"
+
 ### 元となるアイテム : 文字列
 #data modify storage tusb_ad: asset_temp.base_item set value $ここに元となるアイテムのIDを入力
 data modify storage tusb_ad: asset_temp.base_item set value "minecraft:iron_ingot"
@@ -13,15 +21,31 @@ data modify storage tusb_ad: asset_temp.item_count set value 1
 
 ### アイテムのID（AD用の管理ID）: 整数
 #data modify storage tusb_ad: asset_temp.ad_id set value $ここに管理用IDを入力
-data modify storage tusb_ad: asset_temp.ad_id set value 999999
+data modify storage tusb_ad: asset_temp.ad_id set value -1
+
+##################################################################################################
+
+
+### アイテム：名称と説明
+##################################################################################################
+
+# TODO アイテム名と説明の装飾を指定しやすくする
 
 ### アイテム名 : Jsonテキスト
 #data modify storage tusb_ad: asset_temp.display_name set value $ここに名前を入力
+# 「§」を使って装飾することができます
+# 参考サイト：https://ja.minecraft.wiki/w/装飾コード
 data modify storage tusb_ad: asset_temp.display_name set value "快眠まくら"
 
-### アイテム説明 : Jsonテキストリスト
+### アイテム説明 : 文字列型配列
 #data modify storage tusb_ad: asset_temp.description set value $ここに説明を入力
+# 「§」を使って装飾することができます
+# 参考サイト：https://ja.minecraft.wiki/w/装飾コード
 data modify storage tusb_ad: asset_temp.description set value ["§cよく眠れる","快眠まくら。"]
+
+##################################################################################################
+
+
 
 ### 見た目（カスタムモデルデータID） : 整数
 #data modify storage tusb_ad: asset_temp.custommodel_id set value $ここにCMDのIDを入力
